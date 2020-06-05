@@ -10,18 +10,18 @@
       
       
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
     
     
       
-        <title>基礎知識 - AI Yome Project</title>
+        <title>IMUとSLAMを使った腰の動き検出と音声を再生するアプリの実装 - AI Yome Project</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a2408e81.min.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a46bcfb3.min.css">
       
       
         
@@ -38,7 +38,7 @@
       
     
     
-      <link rel="manifest" href="../manifest.webmanifest" crossorigin="use-credentials">
+      <link rel="manifest" href="../../../manifest.webmanifest" crossorigin="use-credentials">
     
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#imuslam" class="md-skip">
           Skip to content
         </a>
       
@@ -70,7 +70,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="AI Yome Project" class="md-header-nav__button md-logo" aria-label="AI Yome Project">
+    <a href="../../.." title="AI Yome Project" class="md-header-nav__button md-logo" aria-label="AI Yome Project">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              基礎知識
+              IMUとSLAMを使った腰の動き検出と音声を再生するアプリの実装
             
           </span>
         </div>
@@ -145,7 +145,7 @@
         
   <li class="md-tabs__item">
     
-      <a href=".." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         Home
       </a>
     
@@ -157,7 +157,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../spatial_perception/" class="md-tabs__link">
+        <a href="../../../spatial_perception/" class="md-tabs__link">
           サーベイ
         </a>
       
@@ -174,7 +174,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../projects/vslam/waist_motion_detection/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           プロジェクト
         </a>
       
@@ -189,7 +189,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../../../basics/" class="md-tabs__link">
           基礎知識
         </a>
       
@@ -211,7 +211,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="AI Yome Project" class="md-nav__button md-logo" aria-label="AI Yome Project">
+    <a href="../../.." title="AI Yome Project" class="md-nav__button md-logo" aria-label="AI Yome Project">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -228,7 +228,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
+    <a href="../../.." title="Home" class="md-nav__link">
       Home
     </a>
   </li>
@@ -265,7 +265,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../spatial_perception/" title="空間的な認識能力の実現" class="md-nav__link">
+    <a href="../../../spatial_perception/" title="空間的な認識能力の実現" class="md-nav__link">
       空間的な認識能力の実現
     </a>
   </li>
@@ -280,10 +280,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       プロジェクト
@@ -305,10 +307,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
     
     <label class="md-nav__link" for="nav-3-1">
       VSLAM (Virtual Sex Life Augmenting Mechanism)
@@ -330,34 +334,135 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../projects/vslam/waist_motion_detection/" title="IMUとSLAMを使った腰の動き検出と音声を再生するアプリの実装" class="md-nav__link">
-      IMUとSLAMを使った腰の動き検出と音声を再生するアプリの実装
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
   
 
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        IMUとSLAMを使った腰の動き検出と音声を再生するアプリの実装
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="IMUとSLAMを使った腰の動き検出と音声を再生するアプリの実装" class="md-nav__link md-nav__link--active">
+      IMUとSLAMを使った腰の動き検出と音声を再生するアプリの実装
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    解析対象の運動
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    腰の移動量の推定に使える情報
+  </a>
+  
+    <nav class="md-nav" aria-label="腰の移動量の推定に使える情報">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imuraw" class="md-nav__link">
+    IMUのRawデータ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slam" class="md-nav__link">
+    SLAMを使ったスマホのポーズ推定結果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    位置と速度と加速度の関係
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    動きの推定
+  </a>
+  
+    <nav class="md-nav" aria-label="動きの推定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    周波数計算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ある位置の通過を検出
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       基礎知識
@@ -379,67 +484,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        基礎知識
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="基礎知識" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../../basics/" title="基礎知識" class="md-nav__link">
       基礎知識
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    通信
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    並列計算
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ヒューマノイドアニメーション
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -474,23 +523,70 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    通信
+  <a href="#_1" class="md-nav__link">
+    解析対象の運動
   </a>
   
 </li>
       
         <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    腰の移動量の推定に使える情報
+  </a>
+  
+    <nav class="md-nav" aria-label="腰の移動量の推定に使える情報">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imuraw" class="md-nav__link">
+    IMUのRawデータ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slam" class="md-nav__link">
+    SLAMを使ったスマホのポーズ推定結果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    並列計算
+    位置と速度と加速度の関係
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    ヒューマノイドアニメーション
+    動きの推定
   </a>
+  
+    <nav class="md-nav" aria-label="動きの推定">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    周波数計算
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ある位置の通過を検出
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -510,25 +606,98 @@
                   
                 
                 
-                <h1 id="_1">基礎知識<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">通信<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+                <h1 id="imuslam">IMUとSLAMを使った腰の動き検出と音声を再生するアプリの実装<a class="headerlink" href="#imuslam" title="Permanent link">&para;</a></h1>
+<p>近年、空○嫁やお○ホールなど、様々なデバイス？が普及しつつあります。
+そこで、これらのデバイスを拡張できるよう、ジャイロセンサを使って、腰の動きに連動して音声を再生するアプリの実装をしました。ジャイロセンサはほぼ全てのスマホに載っているため、大体のスマホで使えるはずです。まだ、調整の余地はありますが、音声の再生タイミングはそこそこ使えるものになりました。（何に）このアプリに関連する技術について説明していきます。</p>
+<h2 id="_1">解析対象の運動<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>解析対象の運動に関してですが、</p>
 <ul>
-<li>ZeroMQ: マルチプラットフォーム＆マルチ言語な通信ライブラリの基礎</li>
-<li>通信プロトコル（TCP・UDP）など</li>
-<li>キャラ操作アプリのTCP・UDP検討</li>
-<li>iPadのカメラ情報の送信をUDPでやってみる　</li>
-<li>WebAPIベースのマイクロサービスをどの程度使えるか</li>
-<li>現在厳しい事例と5G</li>
-<li>Watsonの音声合成API（遅延を発生させてやってみる）</li>
+<li>前後運動である。</li>
+<li>前後運動の振幅・周波数に変化がある。</li>
 </ul>
-<h2 id="_3">並列計算<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>1に関して、前後運動をしているか否か。前向きの動きか後ろ向きの動きかを区別したい。前向きの運動に関しては運動が始まり次第、できるだけ早いタイミングでオンラインで区別したい。
+2に関しては、この振幅と周波数の変化により、デバイスをつけているユーザの状態をある程度推定できるはずなので、ユーザ状態推定にも挑戦したい。（こちらは本記事では実現できませんでした。）</p>
+<h2 id="_2">腰の移動量の推定に使える情報<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="imuraw">IMUのRawデータ<a class="headerlink" href="#imuraw" title="Permanent link">&para;</a></h3>
+<p>端末の加速度と角速度が得られるため、これらのRaw値や、
+これらの値から推定された位置や端末姿勢を使うことが考えられます。</p>
+<p>UnityのAPIを使えば得られます。</p>
+<h3 id="slam">SLAMを使ったスマホのポーズ推定結果<a class="headerlink" href="#slam" title="Permanent link">&para;</a></h3>
+<p>SLAMで、端末の位置と姿勢を計算できます。
+位置と姿勢は、カメラから得られた特徴量の移動量と、
+IMUから計算することが多く、おそらく、ARで使われているSLAMはそのようになっているはずです。
+IMU以外にRGBカメラとか追加のセンサがあることでできます。</p>
+<p>例えば、ARFoundationで提供されているAPIを使って、端末の位置をUnity内で使えるようにできます。端末の初期位置からの相対位置が得られます。</p>
+<p>ただ、ARFoundationのデフォルト設定でカメラ位置の推定をした場合、
+次のような結果になり、前後運動の取得に役立ちそうではありませんでした。
+iPhoneXSで検証しましたが、
+カメラのフレームレートが移動の速さに対して低くモーションブラーなどによって、
+特徴の移動量計算に誤差が出たのが原因だと予想しています。
+<img alt="" src="../real_updown_slam.png" /></p>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
 <ul>
-<li>スレッド・マルチプロセスによる並列化(in Python)</li>
+<li>モーションブラーが起こっていることの検証。</li>
+<li>フレームレート設定の検討。OculusQuestとの比較</li>
 </ul>
-<h2 id="_4">ヒューマノイドアニメーション<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<ul>
-<li>UnityのAvatorシステムと回転</li>
-</ul>
+</div>
+<h2 id="_3">位置と速度と加速度の関係<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>位置と速度と加速度の関係は次の通りです。</p>
+<p>連続的なx,y,aが得られていると仮定したとき、
+$$
+v(t) = \frac{dx(t)}{dt}
+$$
+$$
+a(t) = \frac{dv(t)}{dt}
+$$</p>
+<p>です。理論的な関係はこの式でわかります。例えば、sin(t)のような、周期的な動きの場合、
+$$
+v(t) = cos(t)
+$$
+$$
+a(t) = -sin(t)
+$$
+と、位相が<span><span class="MathJax_Preview">\frac{\pi}{2}</span><script type="math/tex">\frac{\pi}{2}</script></span>ずつずれていきます。なので、１周期の<span><span class="MathJax_Preview">\frac{1}{4}</span><script type="math/tex">\frac{1}{4}</script></span>のズレがあります。</p>
+<p>IMUのみ使う場合は、<span><span class="MathJax_Preview">a(t)</span><script type="math/tex">a(t)</script></span>とカルマンフィルタなどに推定された姿勢<span><span class="MathJax_Preview">p(t)</span><script type="math/tex">p(t)</script></span>が得られます。
+ただし、tは連続ではなく、離散的な点に対して得られます。
+また、ノイズもあります。</p>
+<p>SLAMを使うと、<span><span class="MathJax_Preview">x(t)</span><script type="math/tex">x(t)</script></span>が得られます。
+位置が重要なアプリケーションでは必要になってくると思います。
+例えば、ゆっくりとした動作でカメラが隠れていない場合、スマホを上下に動かすとこのようなきれいなグラフが得られます。
+<img alt="" src="../updown_slam_pose.png" /></p>
+<p>今回は、動きを検出して、いいタイミングで音を鳴らすのみなので、
+Accelerometerの<span><span class="MathJax_Preview">a(t)</span><script type="math/tex">a(t)</script></span>を使います。</p>
+<h2 id="_4">動きの推定<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>とりあえず、どの位置だろうと、前後運動が起こったらそれを検知するアルゴリズムを作ります。
+周波数の変化を早く検知して、そのタイミングで推定状態をゆっくり、早い、終わりそう。の３つのどれかに設定します。（今回とったデータを見る限り方法が思いつきませんでした。）
+また、その周期内である位置を通過したタイミングの検知もします。
+そのタイミングで音を鳴らすことで、今回目的のアプリを実装します。</p>
+<h3 id="_5">周波数計算<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>2,3秒くらいのウィンドウに対して、
+フーリエ変換を適用して、その周波数成分を特徴量として、
+ルールベースでゆっくり、激しい、終わりそうに分類することで、動きを解析してみます。</p>
+<p>実際に腰の後ろにスマホを固定して、
+前後運動をやってみて、それをフーリエ変換してみたところ、
+前後運動の有無程度なら検出できそうでしたが、はっきりと周波数の違いとしては出ませんでした。
+周波数解析の図は次の通りです。</p>
+<p><img alt="" src="../waist_frequency_v1.png" /></p>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
+<p>もう少しデータを整理して解析してみたいところです。</p>
+</div>
+<h3 id="_6">ある位置の通過を検出<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ol>
+<li>加速度の時系列データにローパスフィルタを加える</li>
+<li>ノイズが減った波形の振幅がある点を"通過"したときに、タイミング検出をする。</li>
+</ol>
+<p>という流れになります。加速度とジャイロセンサで計算されたユーザの加速度の波形は
+このようにノイズがのっていますが、調整したローパスフィルタを適用することで、
+このようにある程度きれいになります。</p>
+<p><img alt="" src="../updown_acc.png" /></p>
+<p>このように立ち上がりの段階もうまく残してくれるので、
+タイミング検知に使えます。</p>
+<p>今回は、適当にスレッショルドを設定して、その点を通過したときに、
+音を鳴らすという実装にしました。</p>
                 
               
               
@@ -547,7 +716,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../projects/vslam/waist_motion_detection/" title="IMUとSLAMを使った腰の動き検出と音声を再生するアプリの実装" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../../spatial_perception/" title="空間的な認識能力の実現" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -556,11 +725,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                IMUとSLAMを使った腰の動き検出と音声を再生するアプリの実装
+                空間的な認識能力の実現
               </div>
             </div>
           </a>
         
+        
+          <a href="../../../basics/" title="基礎知識" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                基礎知識
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>
@@ -603,15 +786,15 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
-          base: "..",
+          base: "../../..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
+            worker: "../../../assets/javascripts/worker/search.27c6a5e6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
