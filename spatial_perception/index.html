@@ -1,0 +1,989 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+    
+    
+      
+        <title>空間的な認識能力の実現 - AI Yome Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#03a9f4">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+      <link rel="manifest" href="../manifest.webmanifest" crossorigin="use-credentials">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="AI Yome Project" class="md-header-nav__button md-logo" aria-label="AI Yome Project">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            AI Yome Project
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              空間的な認識能力の実現
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link md-tabs__link--active">
+        AI Yome Project
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="AI Yome Project" class="md-nav__button md-logo" aria-label="AI Yome Project">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    AI Yome Project
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="AI Yome Project" class="md-nav__link">
+      AI Yome Project
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../3d_engine/" title="3Dエンジン" class="md-nav__link">
+      3Dエンジン
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../basics/" title="基礎知識" class="md-nav__link">
+      基礎知識
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../conversational_agent/" title="Conversational agent" class="md-nav__link">
+      Conversational agent
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../development/" title="Development" class="md-nav__link">
+      Development
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../human_motion_by_rl/" title="強化学習でヒューマノイドモデルの動作を学習させる" class="md-nav__link">
+      強化学習でヒューマノイドモデルの動作を学習させる
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../imitation_learning/" title="Imitation learning" class="md-nav__link">
+      Imitation learning
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../language_understanding/" title="Language understanding" class="md-nav__link">
+      Language understanding
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../motion_generation/" title="モーションの獲得とモーション" class="md-nav__link">
+      モーションの獲得とモーション
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../physics/" title="Physics" class="md-nav__link">
+      Physics
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        空間的な認識能力の実現
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="空間的な認識能力の実現" class="md-nav__link md-nav__link--active">
+      空間的な認識能力の実現
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#yome" class="md-nav__link">
+    各Yomeにおいて達成すべきレベル
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    要素技術
+  </a>
+  
+    <nav class="md-nav" aria-label="要素技術">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    アプリでそのまま使えるレベル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ライブラリ化できるレベル
+  </a>
+  
+    <nav class="md-nav" aria-label="ライブラリ化できるレベル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    カメラベースのフルトラッキングライブラリ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    研究レベル
+  </a>
+  
+    <nav class="md-nav" aria-label="研究レベル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    現状と今後
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    文献
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    何に使えるか？
+  </a>
+  
+    <nav class="md-nav" aria-label="何に使えるか？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    ユーザ行動認識（室内)
+  </a>
+  
+    <nav class="md-nav" aria-label="ユーザ行動認識（室内)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    方向1：ユーザ設定ベース
+  </a>
+  
+    <nav class="md-nav" aria-label="方向1：ユーザ設定ベース">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    想定するアプリ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    方向2: 移動パターンとユーザーとのやり取りで自動で何をしてるか学習させる。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    方向3: アクション認識のモデルを使う
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    障害物回避
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    ジェスチャ操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arvr" class="md-nav__link">
+    AR/VR外で手で物理インタラクション
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ar" class="md-nav__link">
+    ARの補助
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vr" class="md-nav__link">
+    VRの補助センサ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    モーションキャプチャとして利用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../unity_avator_and_rotation/" title="Unity avator and rotation" class="md-nav__link">
+      Unity avator and rotation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../unity_memo/" title="Unity memo" class="md-nav__link">
+      Unity memo
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#yome" class="md-nav__link">
+    各Yomeにおいて達成すべきレベル
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    要素技術
+  </a>
+  
+    <nav class="md-nav" aria-label="要素技術">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    アプリでそのまま使えるレベル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    ライブラリ化できるレベル
+  </a>
+  
+    <nav class="md-nav" aria-label="ライブラリ化できるレベル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    カメラベースのフルトラッキングライブラリ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    研究レベル
+  </a>
+  
+    <nav class="md-nav" aria-label="研究レベル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    現状と今後
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    文献
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    何に使えるか？
+  </a>
+  
+    <nav class="md-nav" aria-label="何に使えるか？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    ユーザ行動認識（室内)
+  </a>
+  
+    <nav class="md-nav" aria-label="ユーザ行動認識（室内)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    方向1：ユーザ設定ベース
+  </a>
+  
+    <nav class="md-nav" aria-label="方向1：ユーザ設定ベース">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    想定するアプリ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    方向2: 移動パターンとユーザーとのやり取りで自動で何をしてるか学習させる。
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    方向3: アクション認識のモデルを使う
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    障害物回避
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    ジェスチャ操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arvr" class="md-nav__link">
+    AR/VR外で手で物理インタラクション
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ar" class="md-nav__link">
+    ARの補助
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vr" class="md-nav__link">
+    VRの補助センサ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    モーションキャプチャとして利用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="_1">空間的な認識能力の実現<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>現実世界に存在する物体の形状、種類、位置、姿勢、速度、加速度など、
+空間的な変数を推定する能力に関する技術情報のまとめです。</p>
+<p>ここでは、主にユーザは一人として、
+ユーザの状態と、部屋にあるものの状態を推定する技術にフォーカスします。</p>
+<h2 id="yome">各Yomeにおいて達成すべきレベル<a class="headerlink" href="#yome" title="Permanent link">&para;</a></h2>
+<ul>
+<li>2d yome</li>
+<li>??なにに使える？</li>
+<li>xr yome</li>
+<li>最低ライン<ul>
+<li>VRデバイスのセンサと外部センサを組み合わせてフルボディトラッキング</li>
+</ul>
+</li>
+<li>できたら嬉しい<ul>
+<li>フルトラッキングシステムを使った対話データセットの収集と整備</li>
+</ul>
+</li>
+<li>roboyome</li>
+<li>最低ライン<ul>
+<li>部屋にあるものの大まかなサイズと位置理解。（種類を増やす）</li>
+<li>ロボット視点でユーザの形状と位置を理解（高精度である必要あり）</li>
+</ul>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+massa, nec semper lorem quam in massa.</p>
+</div>
+<h2 id="_2">要素技術<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">アプリでそのまま使えるレベル<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>mediapipe</li>
+<li>opencv</li>
+<li>open3d</li>
+<li>realsense</li>
+<li>leapmotion</li>
+<li>VRのセンサ(IMU &amp; SLAM)</li>
+</ul>
+<h3 id="_4">ライブラリ化できるレベル<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="_5">カメラベースのフルトラッキングライブラリ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>アプリケーションによっては使えるかも。
+下記２つのクラスをライブラリとして提供する。</p>
+<ul>
+<li>HumanStateSyncer</li>
+<li>HuamnStateFetcher</li>
+</ul>
+<h3 id="_6">研究レベル<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h4 id="_7">現状と今後<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>検出、トラッキング、予測に関する技術がいろんなセンサ構成で行われている。2D検出はかなり成熟。3D検出もできつつある。トラッキング、予測、意図推定はまだまだディープラーニングベースはうまく行っていないようで古典技術を組み合わせたほうが良さそう。</p>
+<h4 id="_8">文献<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<h2 id="_9">何に使えるか？<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="_10">ユーザ行動認識（室内)<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>アシスタント</li>
+<li>健康に関するアドバイス</li>
+<li>AI側の自発的なコミュニケーション</li>
+<li>ユーザの動きに反応して発言する</li>
+<li>ジェスチャコミュニケーション</li>
+<li>ピースすると、ピースしてくれる?</li>
+<li>あまり用途がなさそう。</li>
+</ul>
+<p>この方向で機械学習ベースでやっていくなら、ユーザの動きはもちろん、
+部屋にあるものの検出もする必要があり、更に、動きが何かをラベル付していく必要があるため、
+手間がかかる割には、アプリとして良い点が少なそうです。</p>
+<h4 id="1">方向1：ユーザ設定ベース<a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
+<p>部屋の中の人の動き検知とアプリ
+部屋の地図作成、その地図上のどこに人がいるかを計算するアルゴリズムを作成する。
+まずは地図作成して、SLAMでカメラ位置を推定。そこからユーザの顔の位置、手の位置から、位置を推定する。地図にゾーンを設定して、設定とルールベースで3Dモデルを動かす。</p>
+<h5 id="_11">想定するアプリ<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h5>
+<p>寝ていた時間の取得、働きすぎ、さぼりすぎのチェック。適度な休憩と労働バランスを取るように。
+関節の状態を全て取れたとしても難しい気がする。</p>
+<h4 id="2">方向2: 移動パターンとユーザーとのやり取りで自動で何をしてるか学習させる。<a class="headerlink" href="#2" title="Permanent link">&para;</a></h4>
+<p>インタラクションによる学習と知識グラフの活用
+AI「何してるの？」
+ユーザー「〜〜」
+知識グラフを使って、
+ルールベースのところに落とし込む。</p>
+<p><a href="https://developers.google.com/knowledge-graph">https://developers.google.com/knowledge-graph</a></p>
+<h4 id="3">方向3: アクション認識のモデルを使う<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<p>座ってること立っていることはわかりそう。
+座って仕事してることは難しい。パソコンの位置と指を動かしてるの事などわかる必要あり。
+立っている座っているという状態と座標値から、ルールベースで作ることはできるかも。</p>
+<h3 id="_12">障害物回避<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ul>
+<li>ヒューマノイドロボット</li>
+</ul>
+<h3 id="_13">ジェスチャ操作<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>手を降ったら自分に近づいてきてくれるなど？</p>
+<h3 id="arvr">AR/VR外で手で物理インタラクション<a class="headerlink" href="#arvr" title="Permanent link">&para;</a></h3>
+<p>仮想空間でキャラをなでたりする機能をカメラで作る。</p>
+<h3 id="ar">ARの補助<a class="headerlink" href="#ar" title="Permanent link">&para;</a></h3>
+<p>手の上にキャラを乗せるなど。</p>
+<h3 id="vr">VRの補助センサ<a class="headerlink" href="#vr" title="Permanent link">&para;</a></h3>
+<p>人にジャイロセンサをつけて、人の動きを測定することなどできる。</p>
+<h3 id="_14">モーションキャプチャとして利用<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../physics/" title="Physics" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Physics
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../unity_avator_and_rotation/" title="Unity avator and rotation" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Unity avator and rotation
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/xiong-jie-y" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/_xiongjie_" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: ["tabs"],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
