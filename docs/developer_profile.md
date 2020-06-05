@@ -1,0 +1,9 @@
+# 開発者プロフィール
+## Xiong Jie
+### ポートフォリオ
+* [簡易ポートフォリオ](https://togetter.com/li/1440582)
+
+### 技術文章
+* Qiita: https://qiita.com/xiong_jie
+* Hatena Blog: https://xiong-jie.hatenablog.com/
+* Medium: https://medium.com/@_xiongjie_/gan-generates-real-photos-of-japanese-idols-56cc9e5ceedd
