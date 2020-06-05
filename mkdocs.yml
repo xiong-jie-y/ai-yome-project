@@ -1,0 +1,41 @@
+site_name: AI Yome Project
+theme:
+  name: material
+  features:
+    - tabs
+  palette:
+    primary: light blue
+    accent: light blue
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/xiong-jie-y
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/_xiongjie_
+  manifest: manifest.webmanifest
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML

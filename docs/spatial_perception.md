@@ -19,7 +19,10 @@
     * ロボット視点でユーザの形状と位置を理解（高精度である必要あり）
 
 ## 関連プロジェクト & プロダクト
-
+!!! info
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
 
 ## 要素技術
 ### アプリでそのまま使えるレベル
@@ -43,6 +46,7 @@
 検出、トラッキング、予測に関する技術がいろんなセンサ構成で行われている。2D検出はかなり成熟。3D検出もできつつある。トラッキング、予測、意図推定はまだまだディープラーニングベースはうまく行っていないようで古典技術を組み合わせたほうが良さそう。
 
 #### 文献
+
 
 
 ## 何に使えるか？

@@ -1,8 +1,13 @@
-# project-orenoyome (My Waifu Project)
-俺の嫁(My Waifu)を実現するための要素技術の論文、OSS、プロダクトの調査結果をまとめています。また、俺の嫁Projectを遂行するために共有すべきであろう基礎知識も共有しています。
+# AI Yome Project
+AI Yomeを実現するための要素技術の論文、OSS、プロダクトの調査結果をまとめています。また、俺の嫁Projectを遂行するために共有すべきであろう基礎知識も共有しています。
 
 ソースコードや得られた知見は出来る限りオープンにして、
 世の中の嫁プロジェクト（やそれ以外のプロジェクト）にも貢献できればと思っています。
+
+!!! todo
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
 
 ## 俺の嫁ロードマップ
 嫁AIをざっくり３つに分類すると（実現に使うプラットフォームで）
@@ -21,6 +26,8 @@ YomeAIのレベルでEndToEndのモデルを使うのは難しくて、
 意思決定の$a=p(s)$の$a$は制御信号とかではなく、大まかな行動（頭を撫でる。ねぎらいの言葉を言う）などになり、それぞれ子モジュールに委ねることになるでしょう。
 例えば、Microsoftの[Xiaoice](https://arxiv.org/pdf/1812.08989.pdf)では、そのような階層によって返信を作っています。
 
+また、表情、モーション、発話はタイミングが合わせられている必要があります。
+
 ![yome_architecture](yome_architecture.png)
 
 （現時点の技術だと、これくらいの切り方になると思いますが、
@@ -37,7 +44,3 @@ YomeAIのレベルでEndToEndのモデルを使うのは難しくて、
 * [自然言語対話能力](language_understanding.md)：言語を使った対話能力
 * デジタル空間認識: PC画面上のユーザの活動の認識
 * 物理エンジン・3Dエンジン
-
-## 基礎知識
-基礎知識についてまとめていきます。
-
