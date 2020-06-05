@@ -4,11 +4,6 @@ AI Yomeを実現するための要素技術の論文、OSS、プロダクトの�
 ソースコードや得られた知見は出来る限りオープンにして、
 世の中の嫁プロジェクト（やそれ以外のプロジェクト）にも貢献できればと思っています。
 
-!!! todo
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
-
 ## 俺の嫁ロードマップ
 嫁AIをざっくり３つに分類すると（実現に使うプラットフォームで）
 2Dに移る嫁、XR空間上の嫁、ロボットの嫁です。

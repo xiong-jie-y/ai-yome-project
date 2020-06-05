@@ -1,4 +1,13 @@
 site_name: AI Yome Project
+nav:
+  - Home: index.md
+  - 計画＆サーベイ:
+    - surveys/language_understanding.md
+    - surveys/motion_generation.md
+    - surveys/spatial_perception.md
+  - プロジェクト:
+    - VSLAM (Virtual Sex Life Augmenting Mechanism):
+      - projects/vslam/waist_motion_detection.md
 theme:
   name: material
   features:

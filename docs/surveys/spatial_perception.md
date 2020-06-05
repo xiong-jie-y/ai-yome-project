@@ -7,22 +7,19 @@
 
 ## 各Yomeにおいて達成すべきレベル
 * 2d yome
-  * ??なにに使える？
+    * ??なにに使える？
 * xr yome
-  * 最低ライン
-    * VRデバイスのセンサと外部センサを組み合わせてフルボディトラッキング
-  * できたら嬉しい
-    * フルトラッキングシステムを使った対話データセットの収集と整備
+    * 最低ライン
+        * VRデバイスのセンサと外部センサを組み合わせてフルボディトラッキング
+    * できたら嬉しい
+        * フルトラッキングシステムを使った対話データセットの収集と整備
 * roboyome
-  * 最低ライン
-    * 部屋にあるものの大まかなサイズと位置理解。（種類を増やす）
-    * ロボット視点でユーザの形状と位置を理解（高精度である必要あり）
+    * 最低ライン
+        * 部屋にあるものの大まかなサイズと位置理解。（種類を増やす）
+        * ロボット視点でユーザの形状と位置を理解（高精度である必要あり）
 
 ## 関連プロジェクト & プロダクト
-!!! info
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
-    massa, nec semper lorem quam in massa.
+
 
 ## 要素技術
 ### アプリでそのまま使えるレベル
