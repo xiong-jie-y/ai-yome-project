@@ -8,6 +8,10 @@ nav:
     - surveys/3d_engine.md
     - surveys/development_env.md
     - surveys/physics.md
+  - 基礎知識:
+    - 開発環境:
+      - Streamlit:
+        - knowledges/dev_envs/streamlit_for_development.md
   - プロジェクト:
     - VSLAM (Virtual Sex Life Augmenting Mechanism):
       - projects/vslam/waist_motion_detection.md
