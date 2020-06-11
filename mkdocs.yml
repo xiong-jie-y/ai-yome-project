@@ -15,6 +15,9 @@ nav:
   - プロジェクト:
     - VSLAM (Virtual Sex Life Augmenting Mechanism):
       - projects/vslam/waist_motion_detection.md
+    - Interactive Character:
+      - projects/interactive_character/fuwamiku.md
+      - projects/interactive_character/sense_map.md
   - 開発者プロフィール: 
     - developer_profile.md
 theme:
@@ -31,6 +34,9 @@ extra:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/_xiongjie_
   manifest: manifest.webmanifest
+google_analytics:
+  - UA-55455142-8
+  - auto
 markdown_extensions:
   - mdx_truly_sane_lists:
       nested_indent: 2
