@@ -15,7 +15,7 @@
     
     
       
-        <title>インタラクティブなふわみくアプリの実装(3D on screen) - AI Yome Project</title>
+        <title>3Dモデルとアニメーションのファイルフォーマット検討(WIP) - AI Yome Project</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#3d-on-screen" class="md-skip">
+        <a href="#3dwip" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              インタラクティブなふわみくアプリの実装(3D on screen)
+              3Dモデルとアニメーションのファイルフォーマット検討(WIP)
             
           </span>
         </div>
@@ -204,7 +204,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../vslam/roadmap/" class="md-tabs__link">
+        <a href="../roadmap/" class="md-tabs__link md-tabs__link--active">
           プロジェクト
         </a>
       
@@ -499,10 +499,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
     
     <label class="md-nav__link" for="nav-4-1">
       VSLAM (Virtual Sex Life Augmenting Mechanism)
@@ -526,7 +528,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../vslam/roadmap/" title="ロードマップ" class="md-nav__link">
+    <a href="../roadmap/" title="ロードマップ" class="md-nav__link">
       ロードマップ
     </a>
   </li>
@@ -536,11 +538,162 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../vslam/3d_model_and_animation/" title="3Dモデルとアニメーションのファイルフォーマット検討(WIP)" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        3Dモデルとアニメーションのファイルフォーマット検討(WIP)
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="3Dモデルとアニメーションのファイルフォーマット検討(WIP)" class="md-nav__link md-nav__link--active">
       3Dモデルとアニメーションのファイルフォーマット検討(WIP)
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vrm" class="md-nav__link">
+    VRMの情報
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vslamai" class="md-nav__link">
+    VSLAM上のAIエージェントを作る上での要件
+  </a>
+  
+    <nav class="md-nav" aria-label="VSLAM上のAIエージェントを作る上での要件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    テクスチャによる表情モーフが必要（アニメ表現に必須）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ユーザの動きに対する反応
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    モデルから独立したモーションファイル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    服を簡単に着せ替えられるシステム
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mmdpmxvmd" class="md-nav__link">
+    MMDフォーマット(PMX/VMD)の現状
+  </a>
+  
+    <nav class="md-nav" aria-label="MMDフォーマット(PMX/VMD)の現状">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    モデル作成ツール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    モーション作成ツール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    変換ツール・ロード用のライブラリ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vrmgltffbx" class="md-nav__link">
+    採用を検討すべきはVRM、GLTF、FBX
+  </a>
+  
+    <nav class="md-nav" aria-label="採用を検討すべきはVRM、GLTF、FBX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mmd" class="md-nav__link">
+    MMDの機能と比較して足りない部分（実現できないことはあるのか？）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    拡張性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    ユーザによる調整
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -550,7 +703,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../vslam/waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-nav__link">
+    <a href="../waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-nav__link">
       IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装
     </a>
   </li>
@@ -565,12 +718,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
     
     <label class="md-nav__link" for="nav-4-2">
       Interactive Character
@@ -592,74 +743,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        インタラクティブなふわみくアプリの実装(3D on screen)
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="インタラクティブなふわみくアプリの実装(3D on screen)" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../interactive_character/fuwamiku/" title="インタラクティブなふわみくアプリの実装(3D on screen)" class="md-nav__link">
       インタラクティブなふわみくアプリの実装(3D on screen)
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    触れたことと力変化の検出
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    どの部位に当たったかを判定
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    反応を返すアルゴリズムの設計
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    反応を作って管理する
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -669,7 +757,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../sense_map/" title="感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装" class="md-nav__link">
+    <a href="../../interactive_character/sense_map/" title="感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装" class="md-nav__link">
       感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装
     </a>
   </li>
@@ -753,30 +841,118 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#vrm" class="md-nav__link">
+    VRMの情報
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vslamai" class="md-nav__link">
+    VSLAM上のAIエージェントを作る上での要件
+  </a>
+  
+    <nav class="md-nav" aria-label="VSLAM上のAIエージェントを作る上での要件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    触れたことと力変化の検出
+    テクスチャによる表情モーフが必要（アニメ表現に必須）
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    どの部位に当たったかを判定
+    ユーザの動きに対する反応
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    反応を返すアルゴリズムの設計
+    モデルから独立したモーションファイル
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    服を簡単に着せ替えられるシステム
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    反応を作って管理する
+  <a href="#mmdpmxvmd" class="md-nav__link">
+    MMDフォーマット(PMX/VMD)の現状
   </a>
+  
+    <nav class="md-nav" aria-label="MMDフォーマット(PMX/VMD)の現状">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    モデル作成ツール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    モーション作成ツール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    変換ツール・ロード用のライブラリ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vrmgltffbx" class="md-nav__link">
+    採用を検討すべきはVRM、GLTF、FBX
+  </a>
+  
+    <nav class="md-nav" aria-label="採用を検討すべきはVRM、GLTF、FBX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mmd" class="md-nav__link">
+    MMDの機能と比較して足りない部分（実現できないことはあるのか？）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    拡張性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    ユーザによる調整
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -796,62 +972,89 @@
                   
                 
                 
-                <h1 id="3d-on-screen">インタラクティブなふわみくアプリの実装(3D on screen)<a class="headerlink" href="#3d-on-screen" title="Permanent link">&para;</a></h1>
-<h2 id="_1">触れたことと力変化の検出<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>入力デバイスとしてはディスプレイのような平面の画面を想定する。
-タップの強さを力Fに変換して、触っている箇所は画面からカメラ方向へのレイトの交差判定により決定する。力をかけている箇所が一定以上変化した場合（レイが交差するメッシュが変わった場合）に、キャラクターが反応を感じられるようにする。
-力の変化のみ感じられるので、撫でるという動作をしないと反応しない。</p>
-<h2 id="_2">どの部位に当たったかを判定<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>メッシュを当たり判定に使うことで、
-（何も手間をかけない方法では）最も正確な当たり判定ができる。
-しかし、メッシュは部位ごとにグループ化されているとは限らない。
-動かすことを想定したモデルでは、ボーンの設定がされいることが多く、
-そのボーンに対して、weightが紐付けられている。
-なので、この情報を使ってある程度の部位は判定できる。</p>
-<p>欠点としては、</p>
+                <h1 id="3dwip">3Dモデルとアニメーションのファイルフォーマット検討(WIP)<a class="headerlink" href="#3dwip" title="Permanent link">&para;</a></h1>
+<h2 id="vrm">VRMの情報<a class="headerlink" href="#vrm" title="Permanent link">&para;</a></h2>
 <ul>
-<li>A. ボーンに体の全ての部位の情報があるわけではない。</li>
-<li>B. アニメーションを制作しやすくするためのみ必要なボーン情報があり、当たり判定のチェックを惑わす。</li>
+<li><a href="https://gist.github.com/hkrn/d977095004c923ea60412161989fc1e5">https://gist.github.com/hkrn/d977095004c923ea60412161989fc1e5</a></li>
 </ul>
-<p>ので、アプリケーションに関係ない部位を削除したり、必要な部分を追加する必要がある。　</p>
-<p>ふわみくモデルでは、大体の部位が設定されていたので、この情報を元に、
-当たり判定用のオブジェクトを設定する。
-Unityでは、SAColliderBuilderというツールがあり、
-今回はこのツールを活用して、メッシュを当たり判定とした。
-使い方は、キャラクターの最も親オブジェクト（ボーンを子に持つGameObject)にSABoneClolliderBuilderをつけて、Builderの設定をいじってProcessボタンを押すだけです。
-私は次のような設定で書きました。</p>
+<h2 id="vslamai">VSLAM上のAIエージェントを作る上での要件<a class="headerlink" href="#vslamai" title="Permanent link">&para;</a></h2>
+<h3 id="_1">テクスチャによる表情モーフが必要（アニメ表現に必須）<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>VRMではサポートされていないため、自分で実装する必要がある。
+例えば、このように困っている人がいる。
+<a href="https://twitter.com/wotakichii_/status/1099519185225277440">https://twitter.com/wotakichii_/status/1099519185225277440</a></p>
+<ul>
+<li>テクスチャにモーフ先のテクスチャ、animationにextensionを入れることで実現できる。</li>
+</ul>
+<h3 id="_2">ユーザの動きに対する反応<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>声の表現（音声ファイルの埋め込み）(URI or local file path)</li>
+<li>音声生成モデルや音声生成モデルのAPIを入れられるようにする。</li>
+</ol>
+<h3 id="_3">モデルから独立したモーションファイル<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>GLTFでは、アニメーションやメッシュをbinとして別ファイルにする仕組みがあるので、それを使う。
+また、Unity上では、アニメーション用のFBXやGLTFファイルを用意しておいて、
+それをローダーが取り出して、アニメーションにするようです。</p>
+<h3 id="_4">服を簡単に着せ替えられるシステム<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>これを実現するためには、</p>
+<ul>
+<li>キャラクターの体型にあった変形（パラメタライズむずい）</li>
+<li>服を着る。という物理現象を実装する必要<ul>
+<li>衣装ごとに服を固定する点を変える。HingeJointなどを使うのだろう。</li>
+<li>もしくは摩擦や素材を物理エンジン側で扱う。これは計算量的に今は厳しい。検討は面白い。</li>
+</ul>
+</li>
+</ul>
+<p>次の2ステップくらいで達成するのが妥当。</p>
+<ol>
+<li>キャラクターと服をモデルに入れる。服のオンオフのみモーフなどで扱う。（PMXは水着とか単純なものは、テクスチャモーフでやってる。VRM/GLTFではできない？）</li>
+<li>技術的にはパラメタライズした服を作るツールを提供(技術的にはおそらくVRoidに近いものを作る)</li>
+</ol>
+<ul>
+<li>VRM/GLTFは拡張を作って自前実装 &amp; モデル作成ツール側が対応する必要ある。<ul>
+<li><a href="https://hub.vroid.com/characters/5301917300290299425/models/2507684833914463173">Vroid出力のキャラクター</a>で試そうとしたが、服の着せ替えはできない。</li>
+</ul>
+</li>
+<li>PMXはテクスチャモーフにより実現している事例がある。</li>
+<li>ふわみくのひげのオンオフはメッシュのオンオフで実現。</li>
+<li>本来はありとあらゆるものをアニメーションにいれられるべき?</li>
+</ul>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
 <ul>
-<li>欠点Aの対策</li>
-<li>欠点Bの対策</li>
-<li>体の部位の標準化</li>
+<li>VRMのBlend Shapeはモデルに位置定義がある？それともある程度自動？</li>
 </ul>
 </div>
-<h2 id="_3">反応を返すアルゴリズムの設計<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>反応は好感度のように長期的な内部状態と、入力である感覚と文脈（PTO）で決まる。ように思える。POMDPのモデルでいうと、状態が文脈、感覚で、内部状態はモデルが機械学習を通してモデリングしたり、アルゴリズム内部で使われるものです。反応がActionで、表現したいパーソナリティを表現したActionを出すことが今回の問題です。
-2020年現在刺激に対する人の反応の大量のデータは収集・整備されておらず、
-機械学習で今回のような皮膚への刺激への反応を学習するのは現時点ではかなり難しく、
-出来るとしても古典的な手法、ルールベースのアルゴリズムを考える必要があります。</p>
-<p>心理学的には、表情が合ったり見てわかりやすく最大１時間程度のみ持続するものをEmotion、
-長期間持続して、外見を見てもわからないことがあるものをMoodと<a href="https://www.paulekman.com/blog/mood-vs-emotion-difference-between-mood-emotion/">分類</a>しているようです。</p>
-<p>感情に関しては心理学程度のレベルで分類などがなされているようですが、
-感情が生じるプロセスや更に下の生体レベルの仕組みなどは<a href="https://jsai.ixsq.nii.ac.jp/ej/?action=repository_action_common_download&amp;item_id=10483&amp;item_no=1&amp;attribute_id=22&amp;file_no=1">明らかになっていないことも多い</a>ようです。</p>
-<p>まとめるとこの図のような感じで、
-接触部位判定により接触判定が行われた後、
-好感度と接触部位を入力とした関数により感情が生成され、
-その後反応を出力として出す。という設計です。</p>
-<p>反応は表現モーフの名前を直接して操作することで実現しますが、
-この当たりも今後はある程度共通化して使えるものに変えていく必要がありそうです。</p>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
+<h2 id="mmdpmxvmd">MMDフォーマット(PMX/VMD)の現状<a class="headerlink" href="#mmdpmxvmd" title="Permanent link">&para;</a></h2>
+<p>この２つのフォーマットは</p>
+<h3 id="_5">モデル作成ツール<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p><a href="https://w.atwiki.jp/vpvpwiki/pages/169.html">PMDエディタ</a>があり、
+これを使って、Xファイルにボーン設定やスキニング設定することで、PMDを作成する。
+この場合、</p>
 <ul>
-<li>性格の違いをパラメータとして表現したい。</li>
-<li>感情出力のモデル化。</li>
-<li>表情モーフの標準化計画</li>
+<li>Xファイルでボーンを設定してPMDに変換のみ？する人</li>
+<li>PMDで設定している人（どの程度いる？）</li>
 </ul>
-</div>
-<h2 id="_4">反応を作って管理する<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>の二種類以上いて、このことから、PMDで出力していたのを他の形式に変えてもらうのは必ずしも簡単ではない。
+よって、新しいフォーマットを提案して普及していくのであれば、自動変換ツールは必須だと考える。</p>
+<ul>
+<li><a href="https://w.atwiki.jp/vpvpwiki/pages/66.html">PMXモデルの制作フロー</a></li>
+</ul>
+<h3 id="_6">モーション作成ツール<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>MMDがあり見た感じだと、利便性はUnityのMechaimとそこまでかわらなさそうです。</p>
+<h3 id="_7">変換ツール・ロード用のライブラリ<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>VMDもPMDも変換ツールの種類が豊富でなく、
+Windows以外のOSを使っている場合、変換できないこともある。
+例えば、Ubuntuでは、MMD4Mechanimが動かない。
+Blenderでmmd_toolsで読み込んでfbxなどで出力しても、テクスチャが外れたり、
+Unityで使うにはボーンの再設定が必要で不便です。</p>
+<h2 id="vrmgltffbx">採用を検討すべきはVRM、GLTF、FBX<a class="headerlink" href="#vrmgltffbx" title="Permanent link">&para;</a></h2>
+<h3 id="mmd">MMDの機能と比較して足りない部分（実現できないことはあるのか？）<a class="headerlink" href="#mmd" title="Permanent link">&para;</a></h3>
+<h3 id="_8">拡張性<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="_9">ユーザによる調整<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>例えば、いろいろな機能を使ったプレビュー画面を表示する機能を用意して、
+類義語辞書を使ってボーン名をある程度標準化、
+対応付がおかしいところははプレビュー画面を見ながら、ユーザが修正するといった、
+仕組みを作ることで表記ゆれなどを解消する。</p>
                 
               
               
@@ -870,7 +1073,7 @@ Unityでは、SAColliderBuilderというツールがあり、
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../vslam/waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../roadmap/" title="ロードマップ" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -879,19 +1082,19 @@ Unityでは、SAColliderBuilderというツールがあり、
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装
+                ロードマップ
               </div>
             </div>
           </a>
         
         
-          <a href="../sense_map/" title="感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装
+                IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
