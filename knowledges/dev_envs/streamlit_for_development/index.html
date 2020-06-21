@@ -11,7 +11,7 @@
       
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
     
     
       
@@ -19,7 +19,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6e35a1a6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a2408e81.min.css">
       
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.a46bcfb3.min.css">
       
@@ -44,6 +44,7 @@
     
       
         
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-55455142-8","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
       
@@ -57,7 +58,6 @@
     
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="light-blue" data-md-color-accent="light-blue">
   
-    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -204,7 +204,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../../projects/vslam/roadmap/" class="md-tabs__link">
+        <a href="../../../projects/vslam/waist_motion_detection/" class="md-tabs__link">
           プロジェクト
         </a>
       
@@ -495,23 +495,77 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    Pythonの実装効率化
+  <a href="#_2" class="md-nav__link">
+    開発効率化の検討
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#crust" class="md-nav__link">
-    C++/Rust拡張の実装効率化
-  </a>
-  
-    <nav class="md-nav" aria-label="C++/Rust拡張の実装効率化">
+    <nav class="md-nav" aria-label="開発効率化の検討">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    動的ライブラリのリロード
+  <a href="#_3" class="md-nav__link">
+    リロード機能
+  </a>
+  
+    <nav class="md-nav" aria-label="リロード機能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Pythonモジュール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crust" class="md-nav__link">
+    動的ライブラリ(C++/Rust拡張)
+  </a>
+  
+    <nav class="md-nav" aria-label="動的ライブラリ(C++/Rust拡張)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shared-library" class="md-nav__link">
+    shared libraryを使う方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    メモ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    インタラクティブコンポーネント
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    描画機能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyui" class="md-nav__link">
+    keyとUIの分割
   </a>
   
 </li>
@@ -592,30 +646,6 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../projects/vslam/roadmap/" title="ロードマップ" class="md-nav__link">
-      ロードマップ
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../../projects/vslam/3d_model_and_animation/" title="3Dモデルとアニメーションのファイルフォーマット検討(WIP)" class="md-nav__link">
-      3Dモデルとアニメーションのファイルフォーマット検討(WIP)
-    </a>
-  </li>
-
         
           
           
@@ -768,23 +798,77 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    Pythonの実装効率化
+  <a href="#_2" class="md-nav__link">
+    開発効率化の検討
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#crust" class="md-nav__link">
-    C++/Rust拡張の実装効率化
-  </a>
-  
-    <nav class="md-nav" aria-label="C++/Rust拡張の実装効率化">
+    <nav class="md-nav" aria-label="開発効率化の検討">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    動的ライブラリのリロード
+  <a href="#_3" class="md-nav__link">
+    リロード機能
+  </a>
+  
+    <nav class="md-nav" aria-label="リロード機能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    Pythonモジュール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crust" class="md-nav__link">
+    動的ライブラリ(C++/Rust拡張)
+  </a>
+  
+    <nav class="md-nav" aria-label="動的ライブラリ(C++/Rust拡張)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shared-library" class="md-nav__link">
+    shared libraryを使う方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    メモ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    インタラクティブコンポーネント
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    描画機能
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyui" class="md-nav__link">
+    keyとUIの分割
   </a>
   
 </li>
@@ -815,12 +899,57 @@
 <ul>
 <li>Streamlitスクリプト: <code>streamlit run</code>で実行されるスクリプト</li>
 </ul>
-<h2 id="python">Pythonの実装効率化<a class="headerlink" href="#python" title="Permanent link">&para;</a></h2>
-<h2 id="crust">C++/Rust拡張の実装効率化<a class="headerlink" href="#crust" title="Permanent link">&para;</a></h2>
-<h3 id="_2">動的ライブラリのリロード<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="_2">開発効率化の検討<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Streamlitは動的な画面書き換えがPythonモジュールのみで超低コストでできる。
+これは開発時のリッチな出力画面と捉えることもできて、
+今までとは異なるソフトウェア開発方法を模索できるかもしれない。</p>
+<h3 id="_3">リロード機能<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>リロード機能のおかげで、
+実装サイクルをかなり早めることができる。
+これができない条件下では、少し不便になるが、
+それでもインタラクティブコンポーネントを使ったパラメータ調整は使える。
+.soなどDynamic Libraryはうまくリロードできないが、
+Pythonはほとんど困ることはない。</p>
+<h4 id="python">Pythonモジュール<a class="headerlink" href="#python" title="Permanent link">&para;</a></h4>
+<p>Pythonモジュールのリロードはほぼうまくできている。
+一点だけできなかったのは、ssh上でstreamlitを動かして、
+remoteからアクセスした場合に、streamlitコマンドを実行したパス以下のモジュールを絶対importで読み込んでいる場合に、モジュール変更時のリロード時にエラーがでるという問題があった。そういった問題に直面した場合、下記のコードをStreamlitスクリプトの先頭に書けば問題なく動いた。</p>
+<div class="highlight"><pre><span></span><code>import sys
+sys.path.append(&#39;.&#39;)
+</code></pre></div>
+
+<h4 id="crust">動的ライブラリ(C++/Rust拡張)<a class="headerlink" href="#crust" title="Permanent link">&para;</a></h4>
 <p>Streamlitの標準のリロード機能では、<code>.so</code>など動的ライブラリのリロードがされず、
-動的ライブラリ内の処理を変更したとしても、Streamlitスクリプトの実行結果が変わらない。</p>
-<p>ここでは、<code>so</code>をリロードする機能の実装方法を残す。</p>
+動的ライブラリ内の処理を変更したとしても、Streamlitスクリプトの実行結果が変わらない。
+(C++ &amp; boost pythonでは上記結果。 <a href="https://github.com/streamlit/streamlit/issues/1606">起票済み</a>)
+Rustでは、Segmentation faultが発生した。(streamlit 0.61.0 on Python 3.7.7で試したところ、SegmentationFaultが出た。)</p>
+<p>ここでは、<code>so</code>をリロードする機能の実装方法を検討したが、
+Pythonのレイヤでstreamlitのソース変更なしという条件ではできなかった。</p>
+<ul>
+<li><a href="https://qiita.com/mink0212/items/5a429bdc70bef2245413">参考：C++のモジュールの作り方</a></li>
+<li><a href="https://stackoverflow.com/questions/16731115/how-to-debug-a-python-segmentation-fault">C++のPython拡張で便利そうなやつ</a></li>
+</ul>
+<h5 id="shared-library">shared libraryを使う方法<a class="headerlink" href="#shared-library" title="Permanent link">&para;</a></h5>
+<p>boost-pythonを使って実装した<code>.so</code>ファイルであれば、
+import構文でimportして、Pythonモジュールのように扱えるし、
+そうでない<code>.so</code>ファイルでも、ctypesモジュールを使えばロードできる。
+（ただし、pythonモジュール内で.so内の関数の引数と戻り値の型を記述する必要がある。)</p>
+<p>これらの方法を使ってロードした<code>.so</code>をpythonプロセスから<a href="https://stackoverflow.com/questions/437589/how-do-i-unload-reload-a-python-module/487718#487718">削除できないよう</a>。なので、<a href="https://stackoverflow.com/questions/39878103/jupyter-notebook-does-not-reload-boost-python-module">Jupyter</a>やIPythonで使っているautoreloadモジュールも正しくリロードできないし、importlibのreloadモジュールもできない。streamlitもできなかった。</p>
+<h5 id="_4">メモ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<p>soとかdynamic link。
+subprocessにしてスクリプトを実行する。
+streamlitのリッチな描画APIを別スクリプトと共有するなんて難しそう。
+soの手動クローズと再ロード。</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/50964033/forcing-ctypes-cdll-loadlibrary-to-reload-library-from-file">https://stackoverflow.com/questions/50964033/forcing-ctypes-cdll-loadlibrary-to-reload-library-from-file</a></li>
+</ul>
+<ul>
+<li><a href="https://stackoverflow.com/questions/20339053/in-python-how-can-one-tell-if-a-module-comes-from-a-c-extension">https://stackoverflow.com/questions/20339053/in-python-how-can-one-tell-if-a-module-comes-from-a-c-extension</a></li>
+<li><a href="https://stackoverflow.com/questions/8295555/how-to-reload-a-python3-c-extension-module">https://stackoverflow.com/questions/8295555/how-to-reload-a-python3-c-extension-module</a></li>
+</ul>
+<h3 id="_5">インタラクティブコンポーネント<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_6">描画機能<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<h3 id="keyui">keyとUIの分割<a class="headerlink" href="#keyui" title="Permanent link">&para;</a></h3>
                 
               
               
@@ -854,13 +983,13 @@
           </a>
         
         
-          <a href="../../../projects/vslam/roadmap/" title="ロードマップ" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../../projects/vslam/waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                ロードマップ
+                IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -910,14 +1039,14 @@
     </div>
     
       <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../../../assets/javascripts/bundle.a14cc5fd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "../../..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "../../../assets/javascripts/worker/search.7a2ea5ba.min.js"
+            worker: "../../../assets/javascripts/worker/search.27c6a5e6.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
