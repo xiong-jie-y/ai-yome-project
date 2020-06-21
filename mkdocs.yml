@@ -14,6 +14,8 @@ nav:
         - knowledges/dev_envs/streamlit_for_development.md
   - プロジェクト:
     - VSLAM (Virtual Sex Life Augmenting Mechanism):
+      - projects/vslam/roadmap.md
+      - projects/vslam/3d_model_and_animation.md
       - projects/vslam/waist_motion_detection.md
     - Interactive Character:
       - projects/interactive_character/fuwamiku.md
