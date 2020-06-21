@@ -1,4 +1,6 @@
 # 開発者プロフィール
+嫁AI開発者＆Researcher募集！
+
 ## Xiong Jie
 ### ポートフォリオ
 * [簡易ポートフォリオ](https://togetter.com/li/1440582)

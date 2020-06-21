@@ -34,7 +34,31 @@ Rustでは、Segmentation faultが発生した。(streamlit 0.61.0 on Python 3.7
 ここでは、`so`をリロードする機能の実装方法を検討したが、
 Pythonのレイヤでstreamlitのソース変更なしという条件ではできなかった。
 
+* [参考：C++のモジュールの作り方](https://qiita.com/mink0212/items/5a429bdc70bef2245413)
+* [C++のPython拡張で便利そうなやつ](https://stackoverflow.com/questions/16731115/how-to-debug-a-python-segmentation-fault)
+
+##### shared libraryを使う方法
+boost-pythonを使って実装した`.so`ファイルであれば、
+import構文でimportして、Pythonモジュールのように扱えるし、
+そうでない`.so`ファイルでも、ctypesモジュールを使えばロードできる。
+（ただし、pythonモジュール内で.so内の関数の引数と戻り値の型を記述する必要がある。)
+
+これらの方法を使ってロードした`.so`をpythonプロセスから[削除できないよう](https://stackoverflow.com/questions/437589/how-do-i-unload-reload-a-python-module/487718#487718)。なので、[Jupyter](https://stackoverflow.com/questions/39878103/jupyter-notebook-does-not-reload-boost-python-module)やIPythonで使っているautoreloadモジュールも正しくリロードできないし、importlibのreloadモジュールもできない。streamlitもできなかった。
+
+##### メモ
+soとかdynamic link。
+subprocessにしてスクリプトを実行する。
+streamlitのリッチな描画APIを別スクリプトと共有するなんて難しそう。
+soの手動クローズと再ロード。
+
+* https://stackoverflow.com/questions/50964033/forcing-ctypes-cdll-loadlibrary-to-reload-library-from-file
+
+* https://stackoverflow.com/questions/20339053/in-python-how-can-one-tell-if-a-module-comes-from-a-c-extension
+* https://stackoverflow.com/questions/8295555/how-to-reload-a-python3-c-extension-module
+
 ### インタラクティブコンポーネント
 
 
 ### 描画機能
+
+### keyとUIの分割
