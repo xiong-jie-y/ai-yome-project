@@ -141,14 +141,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../../.." class="md-tabs__link">
         Home
       </a>
     
@@ -202,7 +204,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../waist_motion_detection/" class="md-tabs__link">
+        <a href="../roadmap/" class="md-tabs__link md-tabs__link--active">
           プロジェクト
         </a>
       
@@ -470,10 +472,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       プロジェクト
@@ -495,10 +499,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
     
     <label class="md-nav__link" for="nav-4-1">
       VSLAM (Virtual Sex Life Augmenting Mechanism)
@@ -515,6 +521,221 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../roadmap/" title="ロードマップ" class="md-nav__link">
+      ロードマップ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        3Dモデルとアニメーションのファイルフォーマット検討(WIP)
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="3Dモデルとアニメーションのファイルフォーマット検討(WIP)" class="md-nav__link md-nav__link--active">
+      3Dモデルとアニメーションのファイルフォーマット検討(WIP)
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vrm" class="md-nav__link">
+    VRMの情報
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vslamai" class="md-nav__link">
+    VSLAM上のAIエージェントを作る上での要件
+  </a>
+  
+    <nav class="md-nav" aria-label="VSLAM上のAIエージェントを作る上での要件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    テクスチャによる表情モーフが必要（アニメ表現に必須）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ユーザの動きに対する反応
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    モデルから独立したモーションファイル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    服を簡単に着せ替えられるシステム
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mmdpmxvmd" class="md-nav__link">
+    MMDフォーマット(PMX/VMD)の現状
+  </a>
+  
+    <nav class="md-nav" aria-label="MMDフォーマット(PMX/VMD)の現状">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    クリエイター視点
+  </a>
+  
+    <nav class="md-nav" aria-label="クリエイター視点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    モデル作成ツール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    キャラモーション、カメラモーション作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    ステージ作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    レンダリング
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    エンジニアリング視点
+  </a>
+  
+    <nav class="md-nav" aria-label="エンジニアリング視点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    変換ツール・ロード用のライブラリ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vrmgltffbx" class="md-nav__link">
+    採用を検討すべきはVRM、GLTF、FBX
+  </a>
+  
+    <nav class="md-nav" aria-label="採用を検討すべきはVRM、GLTF、FBX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mmd" class="md-nav__link">
+    MMDの機能と比較して足りない部分（実現できないことはあるのか？）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    拡張性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    ユーザによる調整
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
         
           
           
@@ -717,22 +938,62 @@
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
+    クリエイター視点
+  </a>
+  
+    <nav class="md-nav" aria-label="クリエイター視点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     モデル作成ツール
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    モーション作成ツール
+  <a href="#_7" class="md-nav__link">
+    キャラモーション、カメラモーション作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
+    ステージ作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    レンダリング
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    エンジニアリング視点
+  </a>
+  
+    <nav class="md-nav" aria-label="エンジニアリング視点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
     変換ツール・ロード用のライブラリ
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -757,14 +1018,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     拡張性
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     ユーザによる調整
   </a>
   
@@ -845,7 +1106,14 @@
 </div>
 <h2 id="mmdpmxvmd">MMDフォーマット(PMX/VMD)の現状<a class="headerlink" href="#mmdpmxvmd" title="Permanent link">&para;</a></h2>
 <p>この２つのフォーマットは</p>
-<h3 id="_5">モデル作成ツール<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<h3 id="_5">クリエイター視点<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>クリエイター視点では、
+モーションやモデルを変換することで、
+なにか新しい価値が得られるのであれば、
+新しいフォーマットに乗り換えてくれる可能性はある。
+PMDエディタ相当を作ると、PMDエディタで作業していた人が使わない可能性があるので、
+PMXを変換できるような仕組みのほうが移行ユーザ数は増えそう。</p>
+<h4 id="_6">モデル作成ツール<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <p><a href="https://w.atwiki.jp/vpvpwiki/pages/169.html">PMDエディタ</a>があり、
 これを使って、Xファイルにボーン設定やスキニング設定することで、PMDを作成する。
 この場合、</p>
@@ -858,9 +1126,12 @@
 <ul>
 <li><a href="https://w.atwiki.jp/vpvpwiki/pages/66.html">PMXモデルの制作フロー</a></li>
 </ul>
-<h3 id="_6">モーション作成ツール<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>MMDがあり見た感じだと、利便性はUnityのMechaimとそこまでかわらなさそうです。</p>
-<h3 id="_7">変換ツール・ロード用のライブラリ<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<h4 id="_7">キャラモーション、カメラモーション作成<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>MMDがモーション作成ツールで、利便性はUnityのMechaimとそこまでかわらなさそうです。</p>
+<h4 id="_8">ステージ作成<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<h4 id="_9">レンダリング<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<h3 id="_10">エンジニアリング視点<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<h4 id="_11">変換ツール・ロード用のライブラリ<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
 <p>VMDもPMDも変換ツールの種類が豊富でなく、
 Windows以外のOSを使っている場合、変換できないこともある。
 例えば、Ubuntuでは、MMD4Mechanimが動かない。
@@ -868,8 +1139,8 @@ Blenderでmmd_toolsで読み込んでfbxなどで出力しても、テクスチ�
 Unityで使うにはボーンの再設定が必要で不便です。</p>
 <h2 id="vrmgltffbx">採用を検討すべきはVRM、GLTF、FBX<a class="headerlink" href="#vrmgltffbx" title="Permanent link">&para;</a></h2>
 <h3 id="mmd">MMDの機能と比較して足りない部分（実現できないことはあるのか？）<a class="headerlink" href="#mmd" title="Permanent link">&para;</a></h3>
-<h3 id="_8">拡張性<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<h3 id="_9">ユーザによる調整<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_12">拡張性<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<h3 id="_13">ユーザによる調整<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
 <p>例えば、いろいろな機能を使ったプレビュー画面を表示する機能を用意して、
 類義語辞書を使ってボーン名をある程度標準化、
 対応付がおかしいところははプレビュー画面を見ながら、ユーザが修正するといった、
@@ -880,6 +1151,10 @@ Unityで使うにはボーンの再設定が必要で不便です。</p>
                 
 
 
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>var disqus_config=function(){this.page.url="None",this.page.identifier="None"};!function(){var e=document,i=e.createElement("script");i.src="//ai-yome-project.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
+
               
             </article>
           </div>
@@ -888,6 +1163,41 @@ Unityで使うにはボーンの再設定が必要で不便です。</p>
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../roadmap/" title="ロードマップ" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                ロードマップ
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

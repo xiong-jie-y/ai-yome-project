@@ -15,7 +15,7 @@
     
     
       
-        <title>感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装 - AI Yome Project</title>
+        <title>Mediapipeを結合する方法 - AI Yome Project</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ai" class="md-skip">
+        <a href="#mediapipe" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装
+              Mediapipeを結合する方法
             
           </span>
         </div>
@@ -141,16 +141,14 @@
         
           
 
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link md-tabs__link--active">
         Home
       </a>
     
@@ -183,7 +181,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../../knowledges/dev_envs/streamlit_for_development/" class="md-tabs__link">
+        <a href="../streamlit_for_development/" class="md-tabs__link">
           基礎知識
         </a>
       
@@ -204,7 +202,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../vslam/roadmap/" class="md-tabs__link">
+        <a href="../../../projects/vslam/roadmap/" class="md-tabs__link">
           プロジェクト
         </a>
       
@@ -447,7 +445,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../knowledges/dev_envs/streamlit_for_development/" title="実装の加速に役立つ機能" class="md-nav__link">
+    <a href="../streamlit_for_development/" title="実装の加速に役立つ機能" class="md-nav__link">
       実装の加速に役立つ機能
     </a>
   </li>
@@ -472,12 +470,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       プロジェクト
@@ -526,7 +522,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../vslam/roadmap/" title="ロードマップ" class="md-nav__link">
+    <a href="../../../projects/vslam/roadmap/" title="ロードマップ" class="md-nav__link">
       ロードマップ
     </a>
   </li>
@@ -538,7 +534,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../vslam/3d_model_and_animation/" title="3Dモデルとアニメーションのファイルフォーマット検討(WIP)" class="md-nav__link">
+    <a href="../../../projects/vslam/3d_model_and_animation/" title="3Dモデルとアニメーションのファイルフォーマット検討(WIP)" class="md-nav__link">
       3Dモデルとアニメーションのファイルフォーマット検討(WIP)
     </a>
   </li>
@@ -550,7 +546,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../vslam/waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-nav__link">
+    <a href="../../../projects/vslam/waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-nav__link">
       IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装
     </a>
   </li>
@@ -565,12 +561,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2">
     
     <label class="md-nav__link" for="nav-4-2">
       Interactive Character
@@ -594,7 +588,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../fuwamiku/" title="インタラクティブなふわみくアプリの実装(3D on screen)" class="md-nav__link">
+    <a href="../../../projects/interactive_character/fuwamiku/" title="インタラクティブなふわみくアプリの実装(3D on screen)" class="md-nav__link">
       インタラクティブなふわみくアプリの実装(3D on screen)
     </a>
   </li>
@@ -604,94 +598,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../../projects/interactive_character/sense_map/" title="感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装" class="md-nav__link">
       感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ai_1" class="md-nav__link">
-    AIエージェントにおける皮膚感覚の実装の必要性
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    皮膚感覚の設計
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    皮膚感覚の実装
-  </a>
-  
-    <nav class="md-nav" aria-label="皮膚感覚の実装">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    感覚編集エディタの実装
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    皮膚への力変化の計算
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    感覚への反応
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -773,50 +684,9 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ai_1" class="md-nav__link">
-    AIエージェントにおける皮膚感覚の実装の必要性
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    皮膚感覚の設計
+    ダイナミックライブラリを使う
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    皮膚感覚の実装
-  </a>
-  
-    <nav class="md-nav" aria-label="皮膚感覚の実装">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    感覚編集エディタの実装
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    皮膚への力変化の計算
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    感覚への反応
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -836,67 +706,8 @@
                   
                 
                 
-                <h1 id="ai">感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h1>
-<h2 id="ai_1">AIエージェントにおける皮膚感覚の実装の必要性<a class="headerlink" href="#ai_1" title="Permanent link">&para;</a></h2>
-<p>人にも動物にも皮膚感覚があり、
-皮膚感覚はおそらく、振動、温度、痛みなどを感じて、危険や環境の変化に対応をするという用途や、物を持ったり力加減をするのに使われています。
-また、個体同士のコミュニケーションにも重要で、
-個体コミュニケーション用途の皮膚感覚実装を考えます。</p>
-<p>まずは、ふわみくに猫と似たような皮膚感覚のような物を実装して、
-スキンシップコミュニケーションを実現したいと思います。</p>
-<p>動物の分類や個体差によって、触る場所、力、動きによって気持ちいいor不快などの気持ちが生じるはずで、そのAIが感じるであろう感覚を計算したり、個体ごとに設定する方法を考えます。</p>
-<h2 id="_1">皮膚感覚の設計<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>皮膚の下の痛覚と神経細胞の電気信号をシミュレートしたりとか、神経レベルでのシミュレートは厳しい。なので、物体表面に対する力Fの時系列データを入力として、
-どういった感覚が生じるかを計算するモデルやアルゴリズムを作る方向で行きます。</p>
-<p>皮膚感覚は<a href="https://bsd.neuroinf.jp/wiki/%E4%BD%93%E6%80%A7%E6%84%9F%E8%A6%9A">圧力の強さや圧力の強さの変化を感知する器官</a>で成り立っているようです。
-スキンシップで重要なのは経験上どちらかというと圧力変化だと思うので、
-こちらを優先して、実装してみることにします。</p>
-<p>まずは、圧力変化を検知した位置で、圧力の値に対して、
-どう感じるかをマッピングするというシンプルなものにします。</p>
-<p>モデルごとにメッシュごとにFの範囲を設定する。</p>
-<ul>
-<li>快適F下限</li>
-<li>痛いF下限</li>
-</ul>
-<p>の２つのマップを作ります。</p>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<ul>
-<li>圧力の強さがかかり続けることは重要？</li>
-<li>強さに対する関数？</li>
-<li>ある程度長い時系列を見ないと検知できないことってある？</li>
-</ul>
-</div>
-<h2 id="_2">皮膚感覚の実装<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">感覚編集エディタの実装<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>AI作成者が感覚のパラメータを調整するためのエディタ。</p>
-<ul>
-<li>3Dモデルのメッシュにタッチしてレイと交差したメッシュに色を塗る感じにする。</li>
-<li>回転機能と保存機能を実装する。</li>
-<li>(optional) 服とか装飾品を除外する？服とかに触覚があるキャラもあるかも。</li>
-</ul>
-<p>体内部の感覚など、他のメッシュで隠れている部分を編集できるようなモードも用意する必要がある。例えば、メッシュを展開したものにテクスチャを貼り付けて、それに感覚マップをつけていくなど。</p>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<ul>
-<li>この情報を付与するのを自動化したい。</li>
-<li>メッシュに対するセマンティックセグメンテーション相当は、</li>
-<li>メッシュに紐づいたテクスチャに対してセマンティックセグメンテーションする。</li>
-<li>テクスチャにすると情報が落ちるので、レンダリング結果に対してかけるとか。</li>
-</ul>
-</div>
-<h3 id="_4">皮膚への力変化の計算<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>皮膚感覚をシミュレートするためには、触るという動作を検知したり、
-力のかかり具合を計算する必要があり、今の所、物理エンジンに頼るのが最も楽です。</p>
-<div class="admonition todo">
-<p class="admonition-title">Todo</p>
-<ul>
-<li>実装する。</li>
-<li>人の感覚とVR空間の力加減は一致するか？</li>
-</ul>
-</div>
-<h3 id="_5">感覚への反応<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>表情や体の動きといった反射的な動きと、長期的な気持ちへの影響をモデル化する必要がある。</p>
+                <h1 id="mediapipe">Mediapipeを結合する方法<a class="headerlink" href="#mediapipe" title="Permanent link">&para;</a></h1>
+<h2 id="_1">ダイナミックライブラリを使う<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
                 
               
               
@@ -915,41 +726,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../fuwamiku/" title="インタラクティブなふわみくアプリの実装(3D on screen)" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                インタラクティブなふわみくアプリの実装(3D on screen)
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../../developer_profile/" title="開発者プロフィール" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                開発者プロフィール
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

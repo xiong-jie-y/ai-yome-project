@@ -141,14 +141,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../../.." class="md-tabs__link">
         Home
       </a>
     
@@ -202,7 +204,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../waist_motion_detection/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           プロジェクト
         </a>
       
@@ -470,10 +472,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       プロジェクト
@@ -495,10 +499,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
     
     <label class="md-nav__link" for="nav-4-1">
       VSLAM (Virtual Sex Life Augmenting Mechanism)
@@ -515,6 +521,39 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="ロードマップ" class="md-nav__link md-nav__link--active">
+      ロードマップ
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3d_model_and_animation/" title="3Dモデルとアニメーションのファイルフォーマット検討(WIP)" class="md-nav__link">
+      3Dモデルとアニメーションのファイルフォーマット検討(WIP)
+    </a>
+  </li>
+
         
           
           
@@ -676,11 +715,22 @@
 </ol>
 </li>
 </ol>
+<p>この先どうすすめるか？
+プラットフォームにしたいが、どうモデル作者を巻き込むか？R18作りたい人はいるのか？
+汎用的に作って、クラウドファンディングで集めたお金でモデルを増やしていく。
+自分にとって拡張しやすい形にする。</p>
+<p>強化学習を使って、
+感覚マップと興奮視覚モデル（RGBを入力、Attention興奮度などが出力）を使った報酬関数を使って、
+学習させる。</p>
                 
               
               
                 
 
+
+  <h2 id="__comments">Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>var disqus_config=function(){this.page.url="None",this.page.identifier="None"};!function(){var e=document,i=e.createElement("script");i.src="//ai-yome-project.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
 
               
             </article>
@@ -690,6 +740,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../../knowledges/dev_envs/streamlit_for_development/" title="実装の加速に役立つ機能" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                実装の加速に役立つ機能
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../3d_model_and_animation/" title="3Dモデルとアニメーションのファイルフォーマット検討(WIP)" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                3Dモデルとアニメーションのファイルフォーマット検討(WIP)
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
