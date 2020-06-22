@@ -1,7 +1,10 @@
 # 開発者プロフィール
 嫁AI開発者＆Researcher募集！
+[Twitter](https://twitter.com/_xiongjie_)からDMください。
 
 ## Xiong Jie
+### Social Media
+* [Twitter](https://twitter.com/_xiongjie_)
 ### ポートフォリオ
 * [簡易ポートフォリオ](https://togetter.com/li/1440582)
 
