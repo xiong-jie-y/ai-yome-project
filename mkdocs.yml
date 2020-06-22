@@ -35,6 +35,7 @@ extra:
       link: https://github.com/xiong-jie-y
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/_xiongjie_
+  disqus: ai-yome-project
   manifest: manifest.webmanifest
 google_analytics:
   - UA-55455142-8
