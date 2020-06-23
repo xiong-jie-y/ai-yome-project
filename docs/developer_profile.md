@@ -5,6 +5,7 @@
 ## Xiong Jie
 ### Social Media
 * [Twitter](https://twitter.com/_xiongjie_)
+* [マシュマロ[質問箱]](https://marshmallow-qa.com/_xiongjie_?utm_medium=url_text&utm_source=promotion)
 ### ポートフォリオ
 * [簡易ポートフォリオ](https://togetter.com/li/1440582)
 

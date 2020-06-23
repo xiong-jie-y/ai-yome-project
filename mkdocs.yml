@@ -13,6 +13,8 @@ nav:
     - 開発環境:
       - Streamlit:
         - knowledges/dev_envs/streamlit_for_development.md
+      - Mediapipe:
+        - knowledges/dev_envs/mediapipe_framework.md
   - プロジェクト:
     - VSLAM (Virtual Sex Life Augmenting Mechanism):
       - projects/vslam/roadmap.md
