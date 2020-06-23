@@ -17,7 +17,7 @@
     
     
       
-        <title>Mediapipeのフレームワーク - AI Yome Project</title>
+        <title>Mediapipeのフレームワークとしての特徴 - AI Yome Project</title>
       
     
     
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Mediapipeのフレームワーク
+              Mediapipeのフレームワークとしての特徴
             
           </span>
         </div>
@@ -143,14 +143,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../../.." class="md-tabs__link">
         Home
       </a>
     
@@ -370,10 +372,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       基礎知識
@@ -395,10 +399,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1" type="checkbox" id="nav-3-1" checked>
     
     <label class="md-nav__link" for="nav-3-1">
       開発環境
@@ -450,6 +456,154 @@
     <a href="../streamlit_for_development/" title="実装の加速に役立つ機能" class="md-nav__link">
       実装の加速に役立つ機能
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-1-2" type="checkbox" id="nav-3-1-2" checked>
+    
+    <label class="md-nav__link" for="nav-3-1-2">
+      Mediapipe
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Mediapipe" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Mediapipe
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Mediapipeのフレームワークとしての特徴
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Mediapipeのフレームワークとしての特徴" class="md-nav__link md-nav__link--active">
+      Mediapipeのフレームワークとしての特徴
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    フローチャートを組み立てるような感覚で認識パイプラインを作る
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rosmediapipe" class="md-nav__link">
+    ROSとmediapipeの違い
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opencv-graph-api" class="md-nav__link">
+    OpenCV Graph APIとの違い
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculator" class="md-nav__link">
+    Calculatorをどう実装して共有するか?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wip" class="md-nav__link">
+    その他の特徴・改善点 (WIP)
+  </a>
+  
+    <nav class="md-nav" aria-label="その他の特徴・改善点 (WIP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    デバッグ・小さい単位でのテストを容易にしたい
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculator_1" class="md-nav__link">
+    Calculator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculator_2" class="md-nav__link">
+    他のプログラミング言語でCalculatorを実装可能にしたい
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ros" class="md-nav__link">
+    ROSへの組み込み
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -686,42 +840,57 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mediapipe_1" class="md-nav__link">
-    Mediapipeの良い点
-  </a>
-  
-    <nav class="md-nav" aria-label="Mediapipeの良い点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    グラフベースの
+    フローチャートを組み立てるような感覚で認識パイプラインを作る
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    改善したい点
+  <a href="#rosmediapipe" class="md-nav__link">
+    ROSとmediapipeの違い
   </a>
   
-    <nav class="md-nav" aria-label="改善したい点">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opencv-graph-api" class="md-nav__link">
+    OpenCV Graph APIとの違い
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculator" class="md-nav__link">
+    Calculatorをどう実装して共有するか?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wip" class="md-nav__link">
+    その他の特徴・改善点 (WIP)
+  </a>
+  
+    <nav class="md-nav" aria-label="その他の特徴・改善点 (WIP)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     デバッグ・小さい単位でのテストを容易にしたい
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#calculator" class="md-nav__link">
+  <a href="#calculator_1" class="md-nav__link">
+    Calculator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculator_2" class="md-nav__link">
     他のプログラミング言語でCalculatorを実装可能にしたい
   </a>
   
@@ -755,18 +924,71 @@
                   
                 
                 
-                <h1 id="mediapipe">Mediapipeのフレームワーク<a class="headerlink" href="#mediapipe" title="Permanent link">&para;</a></h1>
-<h2 id="mediapipe_1">Mediapipeの良い点<a class="headerlink" href="#mediapipe_1" title="Permanent link">&para;</a></h2>
-<h3 id="_1">グラフベースの<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                <h1 id="mediapipe">Mediapipeのフレームワークとしての特徴<a class="headerlink" href="#mediapipe" title="Permanent link">&para;</a></h1>
+<p>mediapipeは高性能な機械学習モデルが簡単に使えるライブラリとしてよく取り上げられるライブラリです。ただ、mediapipeはロボットやアプリケーションにとっての認識パイプラインを組み立てるためのフレームワークとして見ると面白くて、特に複数人での認識パイプラインの開発を大きく効率化するポテンシャルを持っていると思います。この章では、mediapipeのフレームワークとしての側面を見てみます。</p>
+<h2 id="_1">フローチャートを組み立てるような感覚で認識パイプラインを作る<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Mediapipeでは、Calculatorという単位で処理がたくさん用意されていて、
+このCalculatorを組み合わせて、データを処理するプログラムをフローで書くことができます。
+CalculatorはC++で記述されていて、ある名前、ある型のデータを受け取り、ある型のデータを有る名前として出力する任意の処理です。関数やクラスとは異なり、実行時に１：１で繋がっているわけではなく、出力を<span><span class="MathJax_Preview">n&gt;=1</span><script type="math/tex">n>=1</script></span>のCalculatorに渡せます。つまり、どちらかというとPub/SubのようなアーキテクチャでCalculatorを組み合わせてプログラムを構築するような感じです。　</p>
+<p>このグラフで書く仕組みは、どのようなプログラムにも適しているわけではなく、
+60Hzとか90Hzとか一定周期ではいってくるデータを扱うようなもの（語弊があるかもだが、リアルタイム処理）に適しているように思います。
+理由としては、mediapipeでは、Calculatorの処理はスレッドに割り当てられていて、
+リアルタイムに動作させられるようにスケジューリングされていること、
+データ同期やフレームドロップの仕組みが作りやすくなっていること、などが挙げられます。</p>
+<p>OSSや企業内での可能性として、
+Calculatorを共有する仕組みと、グラフ書いてビルドできるクラウド環境があれば、
+企業やOSSで他人が作ったCalculatorやGraphを組み合わせて、
+素早く認識パイプラインを作る。といったことが可能になりそうです。
+Calculatorもグラフも認識パイプラインに特化していて、
+githubでコードリポジトリを共有することよりも、１段階上の共有になりそうです。</p>
+<p>また、ロボットのコントローラーなどもCalculatorとして実装して、この枠組みの中で作るようなこともできますがそこまでやる人がここまでなるイメージはない。なぜなら、ROSのコミュニティやROSパッケージの多様性、量、品質に今から追いつけるとは思えないし、mediapipeへの移行メリットも少ないからです。</p>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
 <ul>
-<li>含まれている機械学習モデルの情報が実装に必要なレベルで用意されている<ul>
-<li>Calculatorでラップされているが、たまに足りない情報があり、Subgraph, Calculatorコードを読む必要がある</li>
-<li></li>
+<li>ストリーミング処理は実装できるか？<a href="https://arxiv.org/pdf/1906.08172.pdf">ペーパーで関連したものとして上げられてリウ。</a></li>
 </ul>
-</li>
+</div>
+<h2 id="rosmediapipe">ROSとmediapipeの違い<a class="headerlink" href="#rosmediapipe" title="Permanent link">&para;</a></h2>
+<p>大きな違いは、ノード間の協調方法にあり、ROSでは、実行の単位であるノードがプロセスであり、
+Mediapipeでは実行の単位であるCalculatorがスレッドであるということです。
+この２つの違いから次のような相違点が出てきます。</p>
+<p>まずは、ノード間の通信の遅延です。
+ROSでは、特にシリアライズのオーバーヘッドにプラスして、ROS1では、HTTP＋XMLRPCのオーバーヘッドも追加されるため、全てのノードが同じPCで動作していても、ms単位で遅延が載ってくると想像でき、90FPSとかが要求されるアプリとか、計算リソースが貧弱なコンピュータ上で動かすなら、
+シリアライズや通信がないmediapipeが適しているように思えます。
+<a href="https://arxiv.org/pdf/1906.08172.pdf">mediapipeのペーパー</a>にもそのように書かれています。ROS2の設計時の<a href="https://design.ros2.org/articles/ros_on_dds.html">DDSの調査ドキュメント</a>にはROS1でもnodeletsを使ってshared_ptrをプロセス間でやり取りすることで高速なデータやり取りができるようです。</p>
+<p>次にノードの分散処理が可能かどうかという違いがあります。
+Mediapipeは、Calculatorは全てスレッドであるため、
+フレームワークとしてのサポートはありません。
+分散処理をするには、ユーザが明示的に他プロセスと通信する必要があります。
+一方で、ROSはノードがプロセスであり、プロセス間の通信はROSがやってくれます。</p>
+<p>おそらく、ROSのほうがMediapipeよりも複雑なシステムに適しています。
+で、Mediapipeは小型のデバイスやリアルタイム処理が必要なアプリに
+適していると思います。また、ノード間のデータのやり取りのオーバーヘッドが同じプログラム内の関数レベルなので、ノードの粒度をROSよりも小さくできます。</p>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
+<ul>
+<li>もう少し詳細に理由を書く。</li>
 </ul>
-<h2 id="_2">改善したい点<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">デバッグ・小さい単位でのテストを容易にしたい<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+</div>
+<h2 id="opencv-graph-api">OpenCV Graph APIとの違い<a class="headerlink" href="#opencv-graph-api" title="Permanent link">&para;</a></h2>
+<p>Graph APIは画像処理フローをグラフで書いて、
+そのグラフを元にopencv側が自動的に最適化してくれるような仕組みのようです。
+ただ、全ての処理をGraph APIで書けることは保証されておらず、使いどころが難しそうです。</p>
+<h2 id="calculator">Calculatorをどう実装して共有するか?<a class="headerlink" href="#calculator" title="Permanent link">&para;</a></h2>
+<p>CalculatorとGraphが増えていくと、mediapipeで作れるものが格段に増える。これらをどのように共有するか考える。
+ここでは例えば、3D認識やARの機能をmediapipeを使って、mediapipeのリポジトリとは独立した形でメンテ・提供する方法を考える。SLAMの実装も検討する。</p>
+<p>例えば、RGBDカメラを使って、ある物体の3D Bounding Boxを検知してトラッキングするFlowを作るとしよう。</p>
+<ul>
+<li>3D Bounding Boxのデータ構造(protobuf message?)</li>
+<li>Calculator (3D Bounding Box検知、トラッキング)</li>
+<li>グラフ</li>
+<li>グラフ実行スクリプト</li>
+</ul>
+<p>の４つが必要になります。これらの４つを作り、ビルドの依存関係を書いていくことになります。
+リポジトリとして、mediapipeを外部パッケージとしてもつリポジトリを作り、
+それぞれから、mediapipeのCalculatorなどにアクセスすれば出来ると思います。</p>
+<h2 id="wip">その他の特徴・改善点 (WIP)<a class="headerlink" href="#wip" title="Permanent link">&para;</a></h2>
+<h3 id="_2">デバッグ・小さい単位でのテストを容易にしたい<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
 <li>１フレームごとのテストを容易にしたい。<ul>
 <li>→ カメラ、ジャイロなどのセンサデータ保存。再生の仕組み。</li>
@@ -774,8 +996,14 @@
 </li>
 <li></li>
 </ul>
-<h3 id="calculator">他のプログラミング言語でCalculatorを実装可能にしたい<a class="headerlink" href="#calculator" title="Permanent link">&para;</a></h3>
-<p>特にRustでの実装を実現したい。Pythonもプロトタイプ実装に役立つはずです。</p>
+<h3 id="calculator_1">Calculator<a class="headerlink" href="#calculator_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>入力と出力の名前と型がプログラムにより定義される。</li>
+</ul>
+<h3 id="calculator_2">他のプログラミング言語でCalculatorを実装可能にしたい<a class="headerlink" href="#calculator_2" title="Permanent link">&para;</a></h3>
+<p>ROSではプログラミング言語の選択は自由だが、mediapipeでは基本C++でかく、
+Rustなどdynamic library化できる言語であれば使えるはずなので、模索したい。
+特にRustでの実装を実現したい。Pythonもプロトタイプ実装に役立つはずです。</p>
 <h3 id="ros">ROSへの組み込み<a class="headerlink" href="#ros" title="Permanent link">&para;</a></h3>
 <ul>
 <li>ROSの他のコンポーネントの連携検討</li>
@@ -787,6 +1015,12 @@
 <li>ROSにmediapipeと似たフレームワークがないか調べる</li>
 </ul>
 </div>
+<ul>
+<li>含まれている機械学習モデルの情報が実装に必要なレベルで用意されている<ul>
+<li>Calculatorでラップされているが、たまに足りない情報があり、Subgraph, Calculatorコードを読む必要がある</li>
+</ul>
+</li>
+</ul>
                 
               
               
@@ -805,6 +1039,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../streamlit_for_development/" title="実装の加速に役立つ機能" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                実装の加速に役立つ機能
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../../projects/vslam/roadmap/" title="ロードマップ" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                ロードマップ
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
