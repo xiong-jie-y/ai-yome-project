@@ -566,9 +566,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#keyui" class="md-nav__link">
-    keyとUIの分割
+  <a href="#ui" class="md-nav__link">
+    UIの分割
   </a>
+  
+    <nav class="md-nav" aria-label="UIの分割">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    Keyの重複防止
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_1" class="md-nav__link">
+    UIのテスト
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    表示箇所から切り離し
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -935,9 +962,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#keyui" class="md-nav__link">
-    keyとUIの分割
+  <a href="#ui" class="md-nav__link">
+    UIの分割
   </a>
+  
+    <nav class="md-nav" aria-label="UIの分割">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key" class="md-nav__link">
+    Keyの重複防止
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui_1" class="md-nav__link">
+    UIのテスト
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    表示箇所から切り離し
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1017,7 +1071,33 @@ soの手動クローズと再ロード。</p>
 </ul>
 <h3 id="_5">インタラクティブコンポーネント<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <h3 id="_6">描画機能<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<h3 id="keyui">keyとUIの分割<a class="headerlink" href="#keyui" title="Permanent link">&para;</a></h3>
+<h3 id="ui">UIの分割<a class="headerlink" href="#ui" title="Permanent link">&para;</a></h3>
+<h4 id="key">Keyの重複防止<a class="headerlink" href="#key" title="Permanent link">&para;</a></h4>
+<p>Streamlitのinteractive UI(のみ？）には、ユニークなKeyが設定されていて、UIの値が変更されると、そのKeyを使ってWebSockテストet経由でUIの値を取っているようです。
+このKeyは表示するよう設定された文字列などから自動生成されますが、
+この自動生成に頼ると、汎用的なUIを自分で作成して、複数ヶ所から汎用UIを利用した場合に、
+キーの重複が発生してエラーになります。</p>
+<p><del>UIのユニーク値を手軽に得る方法が必要です。</del></p>
+<p><del>1. StreamlitのAPIは並列的に呼び出されることはありません。（現状）なので、time.count()などを使って、TickCountをキーとすると、全てユニークになります。
+2. 汎用コンポーネントのライフタイム期間が同じであれば、pythonのクラスIDが使えますが、そのよな状況は少なそうです。（PythonのクラスIDはインスタンスが割り当てられているメモリアドレスを元に作られていて、同時に存在するオブジェクトのIDは変わらないからです。タイミングが変わるとGCによってメモリ解放されてIDが重複する可能性もあります。（確率は低いかもしれませんが））</del></p>
+<p><del>なので、1がおすすめです。</del></p>
+<p>この方法でユニーク値を取るとスクリプト再実行時に値が変わるので、
+ユーザが操作した結果を取得できない。なので、毎回実行するたびに同じ値になる、
+また、連番のIDを発行していくという方法も有るが、これだと、条件分岐で
+UIが変わる場合にIDが変わってしまうという欠点がある。</p>
+<p>なので、streamlitの表示を行うコンポーネントでは、
+必ず、keyを名前引数として受け取るようにしておいて、
+そのキーを使って、内部的な名前のユニーク性を担保するようにします。</p>
+<h4 id="ui_1">UIのテスト<a class="headerlink" href="#ui_1" title="Permanent link">&para;</a></h4>
+<p>テスト用のDashboardを作ればいいです。
+Seleniumを使えばテストの自動化ができます。</p>
+<h4 id="_7">表示箇所から切り離し<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>今の所、sidebarかメインページのどちらかへの表示しか（標準では）できませんが、
+これらをオブジェクトとして扱って外から渡せるようにしたい。</p>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
+<p>やる</p>
+</div>
                 
               
               
