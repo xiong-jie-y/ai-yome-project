@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://xiong-jie-y.github.io/ai-yome-project/knowledges/dev_envs/mediapipe_integration/">
+        <link rel="canonical" href="https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/tnk_onh_detectors_it1/">
       
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Mediapipeを結合する方法 - AI Yome Project</title>
+        <title>Mediapipeで物体Aが物体Bの内部にどの程度入っているか計算する(1st iteration) - AI Yome Project</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mediapipe" class="md-skip">
+        <a href="#mediapipeab1st-iteration" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Mediapipeを結合する方法
+              Mediapipeで物体Aが物体Bの内部にどの程度入っているか計算する(1st iteration)
             
           </span>
         </div>
@@ -143,14 +143,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../../.." class="md-tabs__link">
         Home
       </a>
     
@@ -183,7 +185,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../streamlit_for_development/" class="md-tabs__link">
+        <a href="../../../knowledges/dev_envs/streamlit_for_development/" class="md-tabs__link">
           基礎知識
         </a>
       
@@ -204,7 +206,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../../projects/vslam/roadmap/" class="md-tabs__link">
+        <a href="../roadmap/" class="md-tabs__link md-tabs__link--active">
           プロジェクト
         </a>
       
@@ -447,7 +449,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../streamlit_for_development/" title="実装の加速に役立つ機能" class="md-nav__link">
+    <a href="../../../knowledges/dev_envs/streamlit_for_development/" title="実装の加速に役立つ機能" class="md-nav__link">
       実装の加速に役立つ機能
     </a>
   </li>
@@ -489,7 +491,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../mediapipe_framework/" title="Mediapipeのフレームワークとしての特徴" class="md-nav__link">
+    <a href="../../../knowledges/dev_envs/mediapipe_framework/" title="Mediapipeのフレームワークとしての特徴" class="md-nav__link">
       Mediapipeのフレームワークとしての特徴
     </a>
   </li>
@@ -514,10 +516,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       プロジェクト
@@ -539,10 +543,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
     
     <label class="md-nav__link" for="nav-4-1">
       VSLAM (Virtual Sex Life Augmenting Mechanism)
@@ -566,7 +572,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projects/vslam/roadmap/" title="ロードマップ" class="md-nav__link">
+    <a href="../roadmap/" title="ロードマップ" class="md-nav__link">
       ロードマップ
     </a>
   </li>
@@ -578,7 +584,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projects/vslam/3d_model_and_animation/" title="3Dモデルとアニメーションのファイルフォーマット検討(WIP)" class="md-nav__link">
+    <a href="../3d_model_and_animation/" title="3Dモデルとアニメーションのファイルフォーマット検討(WIP)" class="md-nav__link">
       3Dモデルとアニメーションのファイルフォーマット検討(WIP)
     </a>
   </li>
@@ -590,7 +596,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projects/vslam/waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-nav__link">
+    <a href="../waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-nav__link">
       IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装
     </a>
   </li>
@@ -600,11 +606,161 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../../projects/vslam/tnk_onh_detectors_it1/" title="Mediapipeで物体Aが物体Bの内部にどの程度入っているか計算する(1st iteration)" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Mediapipeで物体Aが物体Bの内部にどの程度入っているか計算する(1st iteration)
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Mediapipeで物体Aが物体Bの内部にどの程度入っているか計算する(1st iteration)" class="md-nav__link md-nav__link--active">
       Mediapipeで物体Aが物体Bの内部にどの程度入っているか計算する(1st iteration)
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    開発方針
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    教師データを収集
+  </a>
+  
+    <nav class="md-nav" aria-label="教師データを収集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arwip" class="md-nav__link">
+    AR合成データの作成(WIP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slam" class="md-nav__link">
+    SLAM地図に対するアノテーション
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinect-or-realsense-cartographer-on-ros" class="md-nav__link">
+    (Kinect or realsense) &amp; Cartographer on ROS
+  </a>
+  
+    <nav class="md-nav" aria-label="(Kinect or realsense) &amp; Cartographer on ROS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roswip" class="md-nav__link">
+    ROSインストール(WIP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cartographerroswip" class="md-nav__link">
+    CartographerをROSなしで利用(WIP)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rtabmapopen3d" class="md-nav__link">
+    RtabmapとOpen3Dでアノテーション
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-bounding-box-detection" class="md-nav__link">
+    3D Bounding Box Detectionモデルの用意と学習
+  </a>
+  
+    <nav class="md-nav" aria-label="3D Bounding Box Detectionモデルの用意と学習">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fw" class="md-nav__link">
+    モデル、FW、手法の調査
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frustum-pointnet" class="md-nav__link">
+    Frustum Pointnet
+  </a>
+  
+    <nav class="md-nav" aria-label="Frustum Pointnet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3d-bounding-box" class="md-nav__link">
+    3D Bounding Box抽出の関連手法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frustum-pointnet_1" class="md-nav__link">
+    Frustum Pointnetの実装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -644,7 +800,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projects/interactive_character/fuwamiku/" title="インタラクティブなふわみくアプリの実装(3D on screen)" class="md-nav__link">
+    <a href="../../interactive_character/fuwamiku/" title="インタラクティブなふわみくアプリの実装(3D on screen)" class="md-nav__link">
       インタラクティブなふわみくアプリの実装(3D on screen)
     </a>
   </li>
@@ -656,7 +812,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projects/interactive_character/sense_map/" title="感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装" class="md-nav__link">
+    <a href="../../interactive_character/sense_map/" title="感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装" class="md-nav__link">
       感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装
     </a>
   </li>
@@ -741,8 +897,116 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    ダイナミックライブラリを使う
+    開発方針
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    教師データを収集
+  </a>
+  
+    <nav class="md-nav" aria-label="教師データを収集">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arwip" class="md-nav__link">
+    AR合成データの作成(WIP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slam" class="md-nav__link">
+    SLAM地図に対するアノテーション
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinect-or-realsense-cartographer-on-ros" class="md-nav__link">
+    (Kinect or realsense) &amp; Cartographer on ROS
+  </a>
+  
+    <nav class="md-nav" aria-label="(Kinect or realsense) &amp; Cartographer on ROS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#roswip" class="md-nav__link">
+    ROSインストール(WIP)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cartographerroswip" class="md-nav__link">
+    CartographerをROSなしで利用(WIP)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rtabmapopen3d" class="md-nav__link">
+    RtabmapとOpen3Dでアノテーション
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-bounding-box-detection" class="md-nav__link">
+    3D Bounding Box Detectionモデルの用意と学習
+  </a>
+  
+    <nav class="md-nav" aria-label="3D Bounding Box Detectionモデルの用意と学習">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fw" class="md-nav__link">
+    モデル、FW、手法の調査
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frustum-pointnet" class="md-nav__link">
+    Frustum Pointnet
+  </a>
+  
+    <nav class="md-nav" aria-label="Frustum Pointnet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3d-bounding-box" class="md-nav__link">
+    3D Bounding Box抽出の関連手法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frustum-pointnet_1" class="md-nav__link">
+    Frustum Pointnetの実装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -762,8 +1026,158 @@
                   
                 
                 
-                <h1 id="mediapipe">Mediapipeを結合する方法<a class="headerlink" href="#mediapipe" title="Permanent link">&para;</a></h1>
-<h2 id="_1">ダイナミックライブラリを使う<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+                <h1 id="mediapipeab1st-iteration">Mediapipeで物体Aが物体Bの内部にどの程度入っているか計算する(1<sup>st</sup> iteration)<a class="headerlink" href="#mediapipeab1st-iteration" title="Permanent link">&para;</a></h1>
+<h2 id="_1">開発方針<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>内部に入っているかの計算をする場合、
+画像空間上でアルゴリズムを組んでいくことも出来るし、
+三次元空間上で組んでいくこともできる。</p>
+<p>これはアプリの目標精度にもよるけど、
+出来る限り多くのシーンで使うことを考えると、
+三次元空間で組んで方向なども出したほうが良さそうです。</p>
+<p>なので、三次元空間のモデルを作ることにする。</p>
+<p>出力値としては、物体Aと物体Bの中心位置、速度、姿勢を出すことを目標とします。
+物体Aと物体Bはどちらも肌色であり、色やエッジが似ている部分があるため、それ以上の形状を元にどこに物体A、物体Bがあるかを検知する必要があります。</p>
+<p>出力としては、メッシュ、convexhull, bounding boxなどがありますが、
+接触を計算したいわけではなく、内部にはいっている度合を計算したいだけなので、
+bounding boxを採用します。(内部に入れる方はキーポイントの抽出のみで良いかもしれません。)</p>
+<p>トラッキングにより前後の文脈からオクルージョンした場合もキーポイントやBounding Boxのサイズや方向を間違わずに検出できるようにしたい。もしくはサイズのPriorを用意しておいて、
+そこからオクルージョンの対応をできるようにしたい。</p>
+<p>あとはBounding Boxとキーポイントの交差の長さによって、
+あるものを判定したい。</p>
+<h2 id="_2">教師データを収集<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>3D Bounding Boxの学習データを効率よく集める方法として、
+<a href="https://ai.googleblog.com/2020/03/real-time-3d-object-detection-on-mobile.html">mediapipeで使われている方法</a>が良さそうです。
+この方法では、AR合成画像と3D地図へアノテーションして、2D画像に投影する方法の組み合わせることで、アノテーションの工数を大幅に省いていて、この方法なら個人でもできそうです。</p>
+<p>ただし、この方法で教師データを集めるには、</p>
+<ul>
+<li>検出物体をAR表示すること</li>
+<li>SLAMにより地図を構築すること</li>
+</ul>
+<p>が必要です。これらを１アプリで行うのは工数観点で厳しいですが、
+別々には可能だと思います。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+<h3 id="arwip">AR合成データの作成(WIP)<a class="headerlink" href="#arwip" title="Permanent link">&para;</a></h3>
+<h3 id="slam">SLAM地図に対するアノテーション<a class="headerlink" href="#slam" title="Permanent link">&para;</a></h3>
+<p>SLAMを使って地図を作り、その地図に対してBounding Boxをアノテーションする。
+対象物が静止物であれば、カメラの位置とカメラがその位置にいたときの点群、
+及び見えていたRGB画像がわかるため、RGB to 3d bounding box, rgbd to 3d bounding boxの学習データセットを作れます。</p>
+<p>地図づくりができるソフトウェアを今すぐ手軽に扱えそうかという観点で探しました。</p>
+<ul>
+<li><a href="http://introlab.github.io/rtabmap/">rtabmap</a><ul>
+<li>Graph based SLAM。IMU活用なし、端末位置、姿勢あり。</li>
+</ul>
+</li>
+<li><a href="http://www.open3d.org/docs/release/tutorial/ReconstructionSystem/system_overview.html">open3d(Reconstruction system)</a><ul>
+<li>スキャンマッチング系、使えるかもしれないが、IMU活用なし、端末の位置・姿勢なし。kinect, reaslsense対応</li>
+</ul>
+</li>
+<li>cartographer<ul>
+<li>Graph based SLAM。IMUとOdometryを組み合わせた端末姿勢、位置推定あり。</li>
+</ul>
+</li>
+<li>gmapping, uamcl<ul>
+<li>PF系、不明</li>
+</ul>
+</li>
+<li>Tadataka<ul>
+<li>Visual SLAMのみ。地図構築はなさそう。</li>
+</ul>
+</li>
+</ul>
+<p>パラメータ調整が大変と書かれているので多少不安ではありますが、Cartographerが最も良い地図がえられそうです。IMUを使っていて、Graph Based SLAMは全体最適を書けるフェーズがあるからです。
+次点がrtabmapです。</p>
+<h3 id="kinect-or-realsense-cartographer-on-ros">(Kinect or realsense) &amp; Cartographer on ROS<a class="headerlink" href="#kinect-or-realsense-cartographer-on-ros" title="Permanent link">&para;</a></h3>
+<h4 id="roswip">ROSインストール(WIP)<a class="headerlink" href="#roswip" title="Permanent link">&para;</a></h4>
+<p>ROS2はよ普及して！！！（他力本願）</p>
+<p>(ROSはpython3のサポートはないようで、<a href="https://qiita.com/tnjz3/items/4d64fc2d3な6b75e604ab1">python3を使うとると気をつけないといけない点やトラブルが多そう</a>なので、利便性をROS導入の工数が上回りそうなので導入は見合わせました。)</p>
+<p>Ubuntu 18.04上でros melodicをインストールした。
+その際、Cryptodomeというpythonモジュールのバージョン衝突が起こったため、
+下記コマンドで上書きした。Cryptodomeのマイナーバージョンが異なるだけだが、
+今後、バージョン違いにより問題が発生する可能性もある。
+<div class="highlight"><pre><span></span><code>sudo apt --fix-broken install -o Dpkg::Options::=&quot;--force-overwrite&quot;
+</code></pre></div>
+今後問題が起こった場合に元のバージョンに戻せるようにwarningをメモしておく。
+<div class="highlight"><pre><span></span><code>dpkg: warning: overriding problem because --force enabled:
+dpkg: warning: trying to overwrite &#39;/usr/lib/python2.7/dist-packages/Cryptodome/SelfTest/Cipher/test_vectors/AES/CBCMCT192.rsp&#39;, which is also in package python-cryptodome 3.5.1-2~bionic
+</code></pre></div></p>
+<p><a href="http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment">ROSのワークスペース作成</a>
+Python3はイレギュラーなようなので、ROSは利用しないことにしました。</p>
+<h4 id="cartographerroswip">CartographerをROSなしで利用(WIP)<a class="headerlink" href="#cartographerroswip" title="Permanent link">&para;</a></h4>
+<h3 id="rtabmapopen3d">RtabmapとOpen3Dでアノテーション<a class="headerlink" href="#rtabmapopen3d" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/yzrobot/cloud_annotation_tool">C++で書かれているアノテーションツール</a>はある。ただ、GPLであるため、もう少しゆるいライセンスのものが良い。</p>
+<h2 id="3d-bounding-box-detection">3D Bounding Box Detectionモデルの用意と学習<a class="headerlink" href="#3d-bounding-box-detection" title="Permanent link">&para;</a></h2>
+<h3 id="fw">モデル、FW、手法の調査<a class="headerlink" href="#fw" title="Permanent link">&para;</a></h3>
+<p>現状を見てみると、点群処理用のフレームワークの開発スタートが一件あり、
+論文多数、2018年時点くらいまでのモデルはOSSで割と公開されているという印象です。
+学習データのデータフォーマットはまだバラバラで、データフォーマットの要件も明示的に書かれていないので、実行しながら調査する必要があったり、モデルのデプロイもひと手間かかる。
+アノテーションツールも選択肢は少ない。</p>
+<p><a href="https://github.com/open-mmlab/OpenLidarPerceptron">OpenLidarPerception</a>を使えば、Lidar点群を入力として、3DBoundingBoxを出力とするようなモデルを用意に利用できます。
+現在サポートしているのはvoxel baseの手法で、point baseの手法はまだ用意されていないようです。</p>
+<p><a href="https://qiita.com/arutema47/items/cda262c61baa953a97e9">arutemaさんの点群系DNNの記事</a>がいい感じにまとまっています。
+ざっと見る感じ、カラー画像を活用しているのは<a href="https://github.com/charlesq34/frustum-pointnets">Frustum Pointnet</a>のようで、
+今回はこれを活用してみようと思います。</p>
+<p><a href="https://github.com/facebookresearch/votenet">VoteNet</a>やPointPillarはPointCloudのみに頼っており、色情報を使っていない。今回のタスクでは色情報は検出に役立つはずなので、色情報を使っているモデルを採用したい。</p>
+<p>その他、<a href="https://github.com/Yvanali/3D-Object-Detection">3D Bounding Box Detectionの手法がまとまったリスト</a>もあります。<a href="https://github.com/Yochengliu/awesome-point-cloud-analysis">このリスト</a>も豊富に情報が載っています。</p>
+<h3 id="frustum-pointnet">Frustum Pointnet<a class="headerlink" href="#frustum-pointnet" title="Permanent link">&para;</a></h3>
+<p><a href="https://arxiv.org/pdf/1711.08488.pdf">Frustum Pointnet</a>はいい感じな感じがする。</p>
+<h4 id="3d-bounding-box">3D Bounding Box抽出の関連手法<a class="headerlink" href="#3d-bounding-box" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Front View image based methods<ul>
+<li>RGB画像と形状Prior、オクルージョンパターンを使う</li>
+<li>デプス画像に直接CNNでオブジェクト検出</li>
+</ul>
+</li>
+<li>BEV based methods<ul>
+<li>BEVにRPNを適用。小さいオブジェクトや垂直方向の複数オブジェクト検出が無理</li>
+</ul>
+</li>
+<li>3D based methods<ul>
+<li>スライディングウィンドウベース。絶対遅い...</li>
+<li>ポイント座標のヒストグラムを特徴量とした3DBox位置とポーズ推定（速度と性能はfurstnum pointnet以下なはず？）</li>
+<li>frustum pointnet</li>
+</ul>
+</li>
+</ul>
+<h4 id="frustum-pointnet_1">Frustum Pointnetの実装<a class="headerlink" href="#frustum-pointnet_1" title="Permanent link">&para;</a></h4>
+<p><a href="https://github.com/charlesq34/frustum-pointnets">公開されているコード</a>を拡張していく、姿勢が位置自由度なので、3自由度の推定を出来るように変更する。
+このリポジトリには2D検出部分は含まれていないため、自前で学習する必要がある。</p>
+<p>まずは動作確認。必要なモジュールをインストールする。Kittiデータセットを、このリポジトリで使える形式に変換したものが、pickle形式で公開されているが、これはpython2でpickleされたものでpython3で読み込む場合、<a href="https://qiita.com/Kodaira_/items/91207a7e092f491fca43">エンコードを指定したりしないといけない。</a>これに注意してソースコードを変更してあとは実行するのみ。</p>
+<p>まず、学習データセットの形式を確認する。この形式に合ったpickleファイルを保存することで、
+自前データセットの学習機能を実現する。</p>
+<ul>
+<li>id_list: トラック(１インスタンスのIDリスト)</li>
+<li>box2d_list: 2d bounding box(各要素はshape1,4のnd.array)<ul>
+<li>使われてない。関係なさそう。</li>
+</ul>
+</li>
+<li>box3d_list: 3d bounding box(各要素はshape(3,8)のnd.array)<ul>
+<li>順：</li>
+</ul>
+</li>
+<li>input_list: 入力値。shape(n,4)のnd.array</li>
+<li>label_list: ？？セマンティックセグメンテションの？値？点群と同じshape</li>
+<li>type_list: 文字列。クラス名</li>
+<li>heading_list: yaw</li>
+<li>size_list: bounding boxのサイズ？</li>
+<li>frustum_angle_list: frustumの情報。座標変換のみにしか使われてなさそう。</li>
+</ul>
+<p>やるべきことは２つで自前データの加工とモデルの拡張。
+1000フレーム２クラスのデータを用意して、2D detectionとPointnetの学習をする。
+prepare_dataでtrain,evalはground truth2Dを使って、
+frustum内部の点群を抽出している。この処理を真似れば、自前データの処理ができる。
+modelsのangleとdatasetクラスを変更すれば角度は増やせるはずです。</p>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
+</div>
+<p>* prepare_data.pyを参考に3D bounding boxデータを元にPointnet学習データを実装する
+  * 2D bounding boxを学習する。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>aaaaa&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               
@@ -772,7 +1186,7 @@
 
   <h2 id="__comments">Comments</h2>
   <div id="disqus_thread"></div>
-  <script>var disqus_config=function(){this.page.url="https://xiong-jie-y.github.io/ai-yome-project/knowledges/dev_envs/mediapipe_integration/",this.page.identifier="knowledges/dev_envs/mediapipe_integration/"};!function(){var e=document,i=e.createElement("script");i.src="//ai-yome-project.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
+  <script>var disqus_config=function(){this.page.url="https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/tnk_onh_detectors_it1/",this.page.identifier="projects/vslam/tnk_onh_detectors_it1/"};!function(){var e=document,i=e.createElement("script");i.src="//ai-yome-project.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
 
               
             </article>
@@ -782,6 +1196,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../interactive_character/fuwamiku/" title="インタラクティブなふわみくアプリの実装(3D on screen)" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                インタラクティブなふわみくアプリの実装(3D on screen)
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
