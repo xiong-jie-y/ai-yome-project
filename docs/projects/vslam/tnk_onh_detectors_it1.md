@@ -35,6 +35,8 @@ bounding boxを採用します。(内部に入れる方はキーポイントの�
 
 が必要です。これらを１アプリで行うのは工数観点で厳しいですが、
 別々には可能だと思います。[^1]
+また、RGBDのデータセットを作るには、AR画像の生成のみでなく、
+センサのモデルに合った点群モデル生成も必要です。
 
 ### AR合成データの作成(WIP)
 
@@ -86,7 +88,46 @@ Python3はイレギュラーなようなので、ROSは利用しないことに�
 
 ### RtabmapとOpen3Dでアノテーション
 [C++で書かれているアノテーションツール](https://github.com/yzrobot/cloud_annotation_tool)はある。ただ、GPLであるため、もう少しゆるいライセンスのものが良い。
+rtabmapで地図生成して、カメラ位置、RGB画像、デプス画像、完成物の地図を生成できる。
+フォーマットは、
 
+* 端末位置: 選択できる。RGB[-D Datasetsのフォーマット](https://vision.in.tum.de/data/datasets/rgbd-dataset/file_formats)を利用。
+を利用。
+* 地図：plyとかpcd, open3dでは簡単に読み込みできる
+* RGBD：RGB画像とデプス、フレームレートは端末位置のフレームレートと同じだった。
+
+Open3Dには点群を選択するVisualizerWithEditingクラスがあるので、
+これで点群を選択して、その点群を囲むBoundingBoxを自動生成して、それを使うことにする。
+また、VisualizerWithKeycallbackを使えば、BoundingBoxの自動調整はできそうです。
+
+#### Open3DのVisualizerの拡張性
+Open3Dは出来る限り拡張せずに使えるVisualizerを提供することを目指している？
+現時点では、あまり拡張性の幅が広くなく、キーイベントは追加できるがマウスイベントは追加できない。
+
+* サンプル
+  * http://www.open3d.org/docs/release/tutorial/Advanced/interactive_visualization.html
+* 拡張できるクラス
+  * [ViewControl](http://www.open3d.org/docs/release/python_api/open3d.visualization.ViewControl.html): カメラの位置などを変更できる
+  * [VisualizerWithEditing](http://www.open3d.org/docs/release/python_api/open3d.visualization.VisualizerWithEditing.html#open3d.visualization.VisualizerWithEditing): 点群を選択して、それらの点群に何らかの処理をかけられるVisaulzier。[点群の編集用で点群以外は選択できないとのことです。また、２つ以上のGeometryを追加できない。](https://github.com/intel-isl/Open3D/issues/239#issuecomment-375803010)
+  * [VisualzierWithKeyCallback](https://github.com/intel-isl/Open3D/blob/master/cpp/open3d/visualization/visualizer/VisualizerWithKeyCallback.h): キーコールバックを追加できるVisualizer
+* GUIフレームワーク
+  * [0.10.0でimguiに移行](https://github.com/intel-isl/Open3D/releases/tag/v0.10.0)
+* 外部モジュール管理
+  * [submodule](https://github.com/intel-isl/Open3D/compare/v0.9.0...v0.10.0#diff-8903239df476d7401cf9e76af0252622)
+* ビルドシステム
+  * cmake
+* できないこと
+  * [How to rotate a model along X axis?](https://github.com/intel-isl/Open3D/issues/617)
+  * [Manipulate position coordinate of sphere by key events](https://github.com/intel-isl/Open3D/issues/1965)
+  * [Visualize Point Cloud Sequentially](https://github.com/intel-isl/Open3D/issues/1961)
+  * [Visualizing SLAM poses in the same window](https://github.com/intel-isl/Open3D/issues/2015)
+
+#### Open3DへのContirbution検討
+* [ガイドライン](http://www.open3d.org/docs/release/contribute/contribute.html)
+* [スタイル](http://www.open3d.org/docs/release/contribute/styleguide.html#style-guide)
+* [心得２](http://www.open3d.org/docs/release/contribute/contribution_recipes.html#contribution-recipes)
+* [コードレビューのTips](http://www.open3d.org/docs/release/contribute/contribution_recipes.html#contribution-recipes)
+* [ドキュメンテーション貢献](http://www.open3d.org/docs/release/builddocs.html#builddocs)
 
 ## 3D Bounding Box Detectionモデルの用意と学習
 ### モデル、FW、手法の調査
@@ -148,7 +189,7 @@ frustum内部の点群を抽出している。この処理を真似れば、自�
 modelsのangleとdatasetクラスを変更すれば角度は増やせるはずです。
 
 !!! todo
-  * prepare_data.pyを参考に3D bounding boxデータを元にPointnet学習データを実装する
-  * 2D bounding boxを学習する。
+    * prepare_data.pyを参考に3D bounding boxデータを元にPointnet学習データを実装する
+    * 2D bounding boxを学習する。
 
 [^1]: aaaaa
