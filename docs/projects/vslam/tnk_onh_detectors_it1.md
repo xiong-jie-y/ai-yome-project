@@ -23,6 +23,10 @@ bounding boxを採用します。(内部に入れる方はキーポイントの�
 あとはBounding Boxとキーポイントの交差の長さによって、
 あるものを判定したい。
 
+## 1st iterationでの実装物
+* scripts/annotate_3d_bounding_box.py --map-dir-path ~~~
+* scripts/create_frustum_dataset.py --datset-dir ~~~
+
 ## 教師データを収集
 3D Bounding Boxの学習データを効率よく集める方法として、
 [mediapipeで使われている方法](https://ai.googleblog.com/2020/03/real-time-3d-object-detection-on-mobile.html)が良さそうです。
@@ -92,13 +96,31 @@ rtabmapで地図生成して、カメラ位置、RGB画像、デプス画像、�
 フォーマットは、
 
 * 端末位置: 選択できる。RGB[-D Datasetsのフォーマット](https://vision.in.tum.de/data/datasets/rgbd-dataset/file_formats)を利用。
+  * このフォーマットに関して、位置は原点中心からの移動量と定義されていて、明確だが、回転に関して、ワールド座標原点中心の回転か、ワールド座標の座標軸から(0,0)を中心に回転させたものなのか不明確。(with respect toと書かれているので、)おそらく後者。（描画してみたところ後者でした）
 を利用。
 * 地図：plyとかpcd, open3dでは簡単に読み込みできる
 * RGBD：RGB画像とデプス、フレームレートは端末位置のフレームレートと同じだった。
+  * calibration.yamlに含まれているカメラ行列は？
+  * これの説明がどこにもなくて不明。
 
 Open3Dには点群を選択するVisualizerWithEditingクラスがあるので、
 これで点群を選択して、その点群を囲むBoundingBoxを自動生成して、それを使うことにする。
 また、VisualizerWithKeycallbackを使えば、BoundingBoxの自動調整はできそうです。
+
+#### rtabmapが出力するcalibration.yamlについて
+このcalibration.yamlにはいっているcamera_matrixが、
+カメラ行列なのですが、カメラ座標の点にこのカメラ行列を適用しても
+画像座標にならなかったため、このcamera_matrixが一体なんの行列なのかを調べます。
+
+realsenseの座標系は[realsenseのgithub wiki](https://github.com/IntelRealSense/librealsense/wiki/Projection-in-RealSense-SDK-2.0#pixel-coordinates)にまとまっています。
+このドキュメントの値に従い、ビューポイントサイズを補正したintrinsic parameterを作成して、カメラ行列に当てはめて、calibration.yamlのcamera_matrixと比較すると、
+全く同じ値であるため、おそらく、calibration.yamlのcamera_matrixはRGBカメラのカメラ行列であるとわかります。
+
+!!! todo
+    * デプスカメラのパラメータは一体何？
+    * 自前Camera Matrixの変換実装
+    * Open3DのOrientedBoundingBoxのrotateメソッドが何かおかしい件の調査
+
 
 #### Open3DのVisualizerの拡張性
 Open3Dは出来る限り拡張せずに使えるVisualizerを提供することを目指している？
@@ -123,11 +145,15 @@ Open3Dは出来る限り拡張せずに使えるVisualizerを提供すること�
   * [Visualizing SLAM poses in the same window](https://github.com/intel-isl/Open3D/issues/2015)
 
 #### Open3DへのContirbution検討
+
 * [ガイドライン](http://www.open3d.org/docs/release/contribute/contribute.html)
 * [スタイル](http://www.open3d.org/docs/release/contribute/styleguide.html#style-guide)
 * [心得２](http://www.open3d.org/docs/release/contribute/contribution_recipes.html#contribution-recipes)
 * [コードレビューのTips](http://www.open3d.org/docs/release/contribute/contribution_recipes.html#contribution-recipes)
 * [ドキュメンテーション貢献](http://www.open3d.org/docs/release/builddocs.html#builddocs)
+* complete workflowとは？なんのワークフロー？少しAPIについて学ぶ
+* 3Dデータの効率良い扱いを学ぶ
+* unit testをよむ
 
 ## 3D Bounding Box Detectionモデルの用意と学習
 ### モデル、FW、手法の調査
@@ -147,7 +173,7 @@ Open3Dは出来る限り拡張せずに使えるVisualizerを提供すること�
 
 その他、[3D Bounding Box Detectionの手法がまとまったリスト](https://github.com/Yvanali/3D-Object-Detection)もあります。[このリスト](https://github.com/Yochengliu/awesome-point-cloud-analysis)も豊富に情報が載っています。
 
-### Frustum Pointnet
+### Frustum Pointnetの学習
 [Frustum Pointnet](https://arxiv.org/pdf/1711.08488.pdf)はいい感じな感じがする。
 
 #### 3D Bounding Box抽出の関連手法
@@ -161,7 +187,18 @@ Open3Dは出来る限り拡張せずに使えるVisualizerを提供すること�
   * ポイント座標のヒストグラムを特徴量とした3DBox位置とポーズ推定（速度と性能はfurstnum pointnet以下なはず？）
   * frustum pointnet
 
-#### Frustum Pointnetの実装
+#### 2D bounding box detectorの学習
+* Framework: Tensorflow
+* Higher Level Framework: None
+* Model: 使いやすい適当なやつ
+
+で行こうと思います。2D Detectionは成熟してきているので、そこそこ高速に動いて、そこそこ新しいものであれば十分だと思います。ただ、HigherLevelなフレームワークはあまり整っていません。また、mediapipeへの組み込みのしやすさとFrustum Pointnetの学習への使いやすさの両立ができそうです。
+
+この[80クラスで学習されたObjectDetectionモデル](https://www.tensorflow.org/lite/models/object_detection/overview?hl=ja#customize_model)をベースにTransfer Leraningしようと思います。
+
+
+
+#### Frustum Pointnetの学習
 [公開されているコード](https://github.com/charlesq34/frustum-pointnets)を拡張していく、姿勢が位置自由度なので、3自由度の推定を出来るように変更する。
 このリポジトリには2D検出部分は含まれていないため、自前で学習する必要がある。
 
