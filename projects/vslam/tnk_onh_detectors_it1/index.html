@@ -650,6 +650,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1st-iteration" class="md-nav__link">
+    1st iterationでの実装物
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     教師データを収集
   </a>
@@ -703,6 +710,33 @@
     RtabmapとOpen3Dでアノテーション
   </a>
   
+    <nav class="md-nav" aria-label="RtabmapとOpen3Dでアノテーション">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rtabmapcalibrationyaml" class="md-nav__link">
+    rtabmapが出力するcalibration.yamlについて
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open3dvisualizer" class="md-nav__link">
+    Open3DのVisualizerの拡張性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open3dcontirbution" class="md-nav__link">
+    Open3DへのContirbution検討
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -727,10 +761,10 @@
         
           <li class="md-nav__item">
   <a href="#frustum-pointnet" class="md-nav__link">
-    Frustum Pointnet
+    Frustum Pointnetの学習
   </a>
   
-    <nav class="md-nav" aria-label="Frustum Pointnet">
+    <nav class="md-nav" aria-label="Frustum Pointnetの学習">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -741,8 +775,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#2d-bounding-box-detector" class="md-nav__link">
+    2D bounding box detectorの学習
+  </a>
+  
+    <nav class="md-nav" aria-label="2D bounding box detectorの学習">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    データセットを作成
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#frustum-pointnet_1" class="md-nav__link">
-    Frustum Pointnetの実装
+    Frustum Pointnetの学習
   </a>
   
 </li>
@@ -903,6 +957,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1st-iteration" class="md-nav__link">
+    1st iterationでの実装物
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     教師データを収集
   </a>
@@ -956,6 +1017,33 @@
     RtabmapとOpen3Dでアノテーション
   </a>
   
+    <nav class="md-nav" aria-label="RtabmapとOpen3Dでアノテーション">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rtabmapcalibrationyaml" class="md-nav__link">
+    rtabmapが出力するcalibration.yamlについて
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open3dvisualizer" class="md-nav__link">
+    Open3DのVisualizerの拡張性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open3dcontirbution" class="md-nav__link">
+    Open3DへのContirbution検討
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -980,10 +1068,10 @@
         
           <li class="md-nav__item">
   <a href="#frustum-pointnet" class="md-nav__link">
-    Frustum Pointnet
+    Frustum Pointnetの学習
   </a>
   
-    <nav class="md-nav" aria-label="Frustum Pointnet">
+    <nav class="md-nav" aria-label="Frustum Pointnetの学習">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -994,8 +1082,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#2d-bounding-box-detector" class="md-nav__link">
+    2D bounding box detectorの学習
+  </a>
+  
+    <nav class="md-nav" aria-label="2D bounding box detectorの学習">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    データセットを作成
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#frustum-pointnet_1" class="md-nav__link">
-    Frustum Pointnetの実装
+    Frustum Pointnetの学習
   </a>
   
 </li>
@@ -1044,6 +1152,12 @@ bounding boxを採用します。(内部に入れる方はキーポイントの�
 そこからオクルージョンの対応をできるようにしたい。</p>
 <p>あとはBounding Boxとキーポイントの交差の長さによって、
 あるものを判定したい。</p>
+<h2 id="1st-iteration">1<sup>st</sup> iterationでの実装物<a class="headerlink" href="#1st-iteration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>scripts/annotate_3d_bounding_box.py --map-dir-path <sub>~</sub></li>
+<li>scripts/create_frustum_dataset.py --datset-dir <sub>~</sub></li>
+<li>小さいデータセットで学習したモデル</li>
+</ul>
 <h2 id="_2">教師データを収集<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <p>3D Bounding Boxの学習データを効率よく集める方法として、
 <a href="https://ai.googleblog.com/2020/03/real-time-3d-object-detection-on-mobile.html">mediapipeで使われている方法</a>が良さそうです。
@@ -1054,7 +1168,9 @@ bounding boxを採用します。(内部に入れる方はキーポイントの�
 <li>SLAMにより地図を構築すること</li>
 </ul>
 <p>が必要です。これらを１アプリで行うのは工数観点で厳しいですが、
-別々には可能だと思います。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
+別々には可能だと思います。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>
+また、RGBDのデータセットを作るには、AR画像の生成のみでなく、
+センサのモデルに合った点群モデル生成も必要です。</p>
 <h3 id="arwip">AR合成データの作成(WIP)<a class="headerlink" href="#arwip" title="Permanent link">&para;</a></h3>
 <h3 id="slam">SLAM地図に対するアノテーション<a class="headerlink" href="#slam" title="Permanent link">&para;</a></h3>
 <p>SLAMを使って地図を作り、その地図に対してBounding Boxをアノテーションする。
@@ -1103,7 +1219,85 @@ dpkg: warning: trying to overwrite &#39;/usr/lib/python2.7/dist-packages/Cryptod
 Python3はイレギュラーなようなので、ROSは利用しないことにしました。</p>
 <h4 id="cartographerroswip">CartographerをROSなしで利用(WIP)<a class="headerlink" href="#cartographerroswip" title="Permanent link">&para;</a></h4>
 <h3 id="rtabmapopen3d">RtabmapとOpen3Dでアノテーション<a class="headerlink" href="#rtabmapopen3d" title="Permanent link">&para;</a></h3>
-<p><a href="https://github.com/yzrobot/cloud_annotation_tool">C++で書かれているアノテーションツール</a>はある。ただ、GPLであるため、もう少しゆるいライセンスのものが良い。</p>
+<p><a href="https://github.com/yzrobot/cloud_annotation_tool">C++で書かれているアノテーションツール</a>はある。ただ、GPLであるため、もう少しゆるいライセンスのものが良い。
+rtabmapで地図生成して、カメラ位置、RGB画像、デプス画像、完成物の地図を生成できる。
+フォーマットは、</p>
+<ul>
+<li>端末位置: 選択できる。RGB<a href="https://vision.in.tum.de/data/datasets/rgbd-dataset/file_formats">-D Datasetsのフォーマット</a>を利用。<ul>
+<li>このフォーマットに関して、位置は原点中心からの移動量と定義されていて、明確だが、回転に関して、ワールド座標原点中心の回転か、ワールド座標の座標軸から(0,0)を中心に回転させたものなのか不明確。(with respect toと書かれているので、)おそらく後者。（描画してみたところ後者でした）
+を利用。</li>
+</ul>
+</li>
+<li>地図：plyとかpcd, open3dでは簡単に読み込みできる</li>
+<li>RGBD：RGB画像とデプス、フレームレートは端末位置のフレームレートと同じだった。<ul>
+<li>calibration.yamlに含まれているカメラ行列は？</li>
+<li>これの説明がどこにもなくて不明。</li>
+</ul>
+</li>
+</ul>
+<p>Open3Dには点群を選択するVisualizerWithEditingクラスがあるので、
+これで点群を選択して、その点群を囲むBoundingBoxを自動生成して、それを使うことにする。
+また、VisualizerWithKeycallbackを使えば、BoundingBoxの自動調整はできそうです。</p>
+<h4 id="rtabmapcalibrationyaml">rtabmapが出力するcalibration.yamlについて<a class="headerlink" href="#rtabmapcalibrationyaml" title="Permanent link">&para;</a></h4>
+<p>このcalibration.yamlにはいっているcamera_matrixが、
+カメラ行列なのですが、カメラ座標の点にこのカメラ行列を適用しても
+画像座標にならなかったため、このcamera_matrixが一体なんの行列なのかを調べます。</p>
+<p>realsenseの座標系は<a href="https://github.com/IntelRealSense/librealsense/wiki/Projection-in-RealSense-SDK-2.0#pixel-coordinates">realsenseのgithub wiki</a>にまとまっています。
+このドキュメントの値に従い、ビューポイントサイズを補正したintrinsic parameterを作成して、カメラ行列に当てはめて、calibration.yamlのcamera_matrixと比較すると、
+全く同じ値であるため、おそらく、calibration.yamlのcamera_matrixはRGBカメラのカメラ行列であるとわかります。</p>
+<div class="admonition todo">
+<p class="admonition-title">Todo</p>
+<ul>
+<li>デプスカメラのパラメータは一体何？</li>
+<li>自前Camera Matrixの変換実装</li>
+<li>Open3DのOrientedBoundingBoxのrotateメソッドが何かおかしい件の調査</li>
+</ul>
+</div>
+<h4 id="open3dvisualizer">Open3DのVisualizerの拡張性<a class="headerlink" href="#open3dvisualizer" title="Permanent link">&para;</a></h4>
+<p>Open3Dは出来る限り拡張せずに使えるVisualizerを提供することを目指している？
+現時点では、あまり拡張性の幅が広くなく、キーイベントは追加できるがマウスイベントは追加できない。</p>
+<ul>
+<li>サンプル<ul>
+<li><a href="http://www.open3d.org/docs/release/tutorial/Advanced/interactive_visualization.html">http://www.open3d.org/docs/release/tutorial/Advanced/interactive_visualization.html</a></li>
+</ul>
+</li>
+<li>拡張できるクラス<ul>
+<li><a href="http://www.open3d.org/docs/release/python_api/open3d.visualization.ViewControl.html">ViewControl</a>: カメラの位置などを変更できる</li>
+<li><a href="http://www.open3d.org/docs/release/python_api/open3d.visualization.VisualizerWithEditing.html#open3d.visualization.VisualizerWithEditing">VisualizerWithEditing</a>: 点群を選択して、それらの点群に何らかの処理をかけられるVisaulzier。<a href="https://github.com/intel-isl/Open3D/issues/239#issuecomment-375803010">点群の編集用で点群以外は選択できないとのことです。また、２つ以上のGeometryを追加できない。</a></li>
+<li><a href="https://github.com/intel-isl/Open3D/blob/master/cpp/open3d/visualization/visualizer/VisualizerWithKeyCallback.h">VisualzierWithKeyCallback</a>: キーコールバックを追加できるVisualizer</li>
+</ul>
+</li>
+<li>GUIフレームワーク<ul>
+<li><a href="https://github.com/intel-isl/Open3D/releases/tag/v0.10.0">0.10.0でimguiに移行</a></li>
+</ul>
+</li>
+<li>外部モジュール管理<ul>
+<li><a href="https://github.com/intel-isl/Open3D/compare/v0.9.0...v0.10.0#diff-8903239df476d7401cf9e76af0252622">submodule</a></li>
+</ul>
+</li>
+<li>ビルドシステム<ul>
+<li>cmake</li>
+</ul>
+</li>
+<li>できないこと<ul>
+<li><a href="https://github.com/intel-isl/Open3D/issues/617">How to rotate a model along X axis?</a></li>
+<li><a href="https://github.com/intel-isl/Open3D/issues/1965">Manipulate position coordinate of sphere by key events</a></li>
+<li><a href="https://github.com/intel-isl/Open3D/issues/1961">Visualize Point Cloud Sequentially</a></li>
+<li><a href="https://github.com/intel-isl/Open3D/issues/2015">Visualizing SLAM poses in the same window</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="open3dcontirbution">Open3DへのContirbution検討<a class="headerlink" href="#open3dcontirbution" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="http://www.open3d.org/docs/release/contribute/contribute.html">ガイドライン</a></li>
+<li><a href="http://www.open3d.org/docs/release/contribute/styleguide.html#style-guide">スタイル</a></li>
+<li><a href="http://www.open3d.org/docs/release/contribute/contribution_recipes.html#contribution-recipes">心得２</a></li>
+<li><a href="http://www.open3d.org/docs/release/contribute/contribution_recipes.html#contribution-recipes">コードレビューのTips</a></li>
+<li><a href="http://www.open3d.org/docs/release/builddocs.html#builddocs">ドキュメンテーション貢献</a></li>
+<li>complete workflowとは？なんのワークフロー？少しAPIについて学ぶ</li>
+<li>3Dデータの効率良い扱いを学ぶ</li>
+<li>unit testをよむ</li>
+</ul>
 <h2 id="3d-bounding-box-detection">3D Bounding Box Detectionモデルの用意と学習<a class="headerlink" href="#3d-bounding-box-detection" title="Permanent link">&para;</a></h2>
 <h3 id="fw">モデル、FW、手法の調査<a class="headerlink" href="#fw" title="Permanent link">&para;</a></h3>
 <p>現状を見てみると、点群処理用のフレームワークの開発スタートが一件あり、
@@ -1117,7 +1311,7 @@ Python3はイレギュラーなようなので、ROSは利用しないことに�
 今回はこれを活用してみようと思います。</p>
 <p><a href="https://github.com/facebookresearch/votenet">VoteNet</a>やPointPillarはPointCloudのみに頼っており、色情報を使っていない。今回のタスクでは色情報は検出に役立つはずなので、色情報を使っているモデルを採用したい。</p>
 <p>その他、<a href="https://github.com/Yvanali/3D-Object-Detection">3D Bounding Box Detectionの手法がまとまったリスト</a>もあります。<a href="https://github.com/Yochengliu/awesome-point-cloud-analysis">このリスト</a>も豊富に情報が載っています。</p>
-<h3 id="frustum-pointnet">Frustum Pointnet<a class="headerlink" href="#frustum-pointnet" title="Permanent link">&para;</a></h3>
+<h3 id="frustum-pointnet">Frustum Pointnetの学習<a class="headerlink" href="#frustum-pointnet" title="Permanent link">&para;</a></h3>
 <p><a href="https://arxiv.org/pdf/1711.08488.pdf">Frustum Pointnet</a>はいい感じな感じがする。</p>
 <h4 id="3d-bounding-box">3D Bounding Box抽出の関連手法<a class="headerlink" href="#3d-bounding-box" title="Permanent link">&para;</a></h4>
 <ul>
@@ -1137,7 +1331,46 @@ Python3はイレギュラーなようなので、ROSは利用しないことに�
 </ul>
 </li>
 </ul>
-<h4 id="frustum-pointnet_1">Frustum Pointnetの実装<a class="headerlink" href="#frustum-pointnet_1" title="Permanent link">&para;</a></h4>
+<h4 id="2d-bounding-box-detector">2D bounding box detectorの学習<a class="headerlink" href="#2d-bounding-box-detector" title="Permanent link">&para;</a></h4>
+<p>Frustum Pointnetでは、Pointnetの前段でオブジェクトを2D検知をします。
+そのための2D検知モデルを学習させます。</p>
+<ul>
+<li>Framework: Tensorflow</li>
+<li>Higher Level Framework: None</li>
+<li>Model: 使いやすい適当なやつ</li>
+</ul>
+<p>で行こうと思います。2D Detectionは成熟してきているので、そこそこ高速に動いて、そこそこ新しいものであれば十分だと思います。ただ、HigherLevelなフレームワークはあまり整っていません。また、mediapipeへの組み込みのしやすさとFrustum Pointnetの学習への使いやすさの両立ができそうです。</p>
+<p>この<a href="https://www.tensorflow.org/lite/models/object_detection/overview?hl=ja#customize_model">80クラスで学習されたObjectDetectionモデル</a>をベースにTransfer Leraningしようと思います。</p>
+<p>Object Detection APIを使うメリットですが、
+自社のシステムに組み込む際のFlexibilityの高さや、
+Tensorflowの知識がある人にとっての使いやすさなどが上げられます。</p>
+<h5 id="_3">データセットを作成<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h5>
+<p>Object Detection APIを使った学習フローは次の通りです。</p>
+<ol>
+<li>学習データをtf-record形式で、ラベルIDの対応付データをproto形式で出力する。</li>
+<li>モデルの選択と学習パラメータの設定、上記学習データを使った学習の実行</li>
+<li>チェックポイントファイルをFrozenGraphに変換</li>
+<li>動作確認</li>
+<li>(mediapipe用の場合、3,4を飛ばし<a href="https://github.com/google/mediapipe/tree/master/mediapipe/models/object_detection_saved_model">これ</a>を実施）FrozenGraphに最適化をかけてtfliteに</li>
+</ol>
+<p>3,4に関して、tensorflow-gpu 1.15.0ではエラーが発生したため、
+1.14.0で3,4を実施しました。3,4のtensorflowバージョンは揃っている必要がありました。
+1.14.0でFrozenGraph生成、1.15.0で実行はできませんでした。（相性が悪いだけ？）</p>
+<p>Object Detection APIの学習データとして受け付ける形式は、<a href="https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/using_your_own_dataset.md">TFRecordの一部のフィールドにデータを入れたもの</a>です。ドキュメントにtfrecordの出力に参考になるスクリプトが書いてあるので、参考にすると良いでしょう。BoundingBoxは正規化した最小座標と最大座標であること、ファイル名が含まれないと他のtfrecord読み込みツールでエラーが出る可能性があることだけ注意していただければと思います。ファイル名なしでobject detection apiが使えるかは不明。試していません。</p>
+<p>TFRecordを生成するスクリプトを作った場合は、<a href="https://github.com/sulc/tfrecord-viewer">tfrecord-viewer</a>で中身を確認したりできます。</p>
+<p>FrozenGraphの生成スクリプトは次の通りです。あとは、<a href="https://qiita.com/karaage0703/items/76ef6b774e3cd69028bb">からあげさんの記事通り</a>でできます。</p>
+<div class="highlight"><pre><span></span><code><span class="nv">INPUT_TYPE</span><span class="o">=</span>image_tensor
+<span class="nv">PIPELINE_CONFIG_PATH</span><span class="o">=</span>object_detection_tools/config/ssd_inception_v2_coco.config
+<span class="nv">TRAINED_CKPT_PREFIX</span><span class="o">=</span>~/Downloads/saved_model_01-20200701T084638Z-001/saved_model_01/model.ckpt-10000
+<span class="nv">EXPORT_DIR</span><span class="o">=</span>exported_graphs
+python object_detection/export_inference_graph.py <span class="se">\</span>
+    --input_type<span class="o">=</span><span class="si">${</span><span class="nv">INPUT_TYPE</span><span class="si">}</span> <span class="se">\</span>
+    --pipeline_config_path<span class="o">=</span><span class="si">${</span><span class="nv">PIPELINE_CONFIG_PATH</span><span class="si">}</span> <span class="se">\</span>
+    --trained_checkpoint_prefix<span class="o">=</span><span class="si">${</span><span class="nv">TRAINED_CKPT_PREFIX</span><span class="si">}</span> <span class="se">\</span>
+    --output_directory<span class="o">=</span><span class="si">${</span><span class="nv">EXPORT_DIR</span><span class="si">}</span>
+</code></pre></div>
+
+<h4 id="frustum-pointnet_1">Frustum Pointnetの学習<a class="headerlink" href="#frustum-pointnet_1" title="Permanent link">&para;</a></h4>
 <p><a href="https://github.com/charlesq34/frustum-pointnets">公開されているコード</a>を拡張していく、姿勢が位置自由度なので、3自由度の推定を出来るように変更する。
 このリポジトリには2D検出部分は含まれていないため、自前で学習する必要がある。</p>
 <p>まずは動作確認。必要なモジュールをインストールする。Kittiデータセットを、このリポジトリで使える形式に変換したものが、pickle形式で公開されているが、これはpython2でpickleされたものでpython3で読み込む場合、<a href="https://qiita.com/Kodaira_/items/91207a7e092f491fca43">エンコードを指定したりしないといけない。</a>これに注意してソースコードを変更してあとは実行するのみ。</p>
@@ -1167,9 +1400,11 @@ frustum内部の点群を抽出している。この処理を真似れば、自�
 modelsのangleとdatasetクラスを変更すれば角度は増やせるはずです。</p>
 <div class="admonition todo">
 <p class="admonition-title">Todo</p>
+<ul>
+<li>prepare_data.pyを参考に3D bounding boxデータを元にPointnet学習データを実装する</li>
+<li>2D bounding boxを学習する。</li>
+</ul>
 </div>
-<p>* prepare_data.pyを参考に3D bounding boxデータを元にPointnet学習データを実装する
-  * 2D bounding boxを学習する。</p>
 <div class="footnote">
 <hr />
 <ol>
