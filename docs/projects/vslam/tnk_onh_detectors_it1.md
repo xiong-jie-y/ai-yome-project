@@ -26,6 +26,7 @@ bounding boxを採用します。(内部に入れる方はキーポイントの�
 ## 1st iterationでの実装物
 * scripts/annotate_3d_bounding_box.py --map-dir-path ~~~
 * scripts/create_frustum_dataset.py --datset-dir ~~~
+* 小さいデータセットで学習したモデル
 
 ## 教師データを収集
 3D Bounding Boxの学習データを効率よく集める方法として、
@@ -188,6 +189,9 @@ Open3Dは出来る限り拡張せずに使えるVisualizerを提供すること�
   * frustum pointnet
 
 #### 2D bounding box detectorの学習
+Frustum Pointnetでは、Pointnetの前段でオブジェクトを2D検知をします。
+そのための2D検知モデルを学習させます。
+
 * Framework: Tensorflow
 * Higher Level Framework: None
 * Model: 使いやすい適当なやつ
@@ -196,7 +200,42 @@ Open3Dは出来る限り拡張せずに使えるVisualizerを提供すること�
 
 この[80クラスで学習されたObjectDetectionモデル](https://www.tensorflow.org/lite/models/object_detection/overview?hl=ja#customize_model)をベースにTransfer Leraningしようと思います。
 
+Object Detection APIを使うメリットですが、
+自社のシステムに組み込む際のFlexibilityの高さや、
+Tensorflowの知識がある人にとっての使いやすさなどが上げられます。
 
+
+##### データセットを作成
+Object Detection APIを使った学習フローは次の通りです。
+
+1. 学習データをtf-record形式で、ラベルIDの対応付データをproto形式で出力する。
+2. モデルの選択と学習パラメータの設定、上記学習データを使った学習の実行
+3. チェックポイントファイルをFrozenGraphに変換
+4. 動作確認
+5. (mediapipe用の場合、3,4を飛ばし[これ](https://github.com/google/mediapipe/tree/master/mediapipe/models/object_detection_saved_model)を実施）FrozenGraphに最適化をかけてtfliteに
+
+3,4に関して、tensorflow-gpu 1.15.0ではエラーが発生したため、
+1.14.0で3,4を実施しました。3,4のtensorflowバージョンは揃っている必要がありました。
+1.14.0でFrozenGraph生成、1.15.0で実行はできませんでした。（相性が悪いだけ？）
+
+Object Detection APIの学習データとして受け付ける形式は、[TFRecordの一部のフィールドにデータを入れたもの](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/using_your_own_dataset.md)です。ドキュメントにtfrecordの出力に参考になるスクリプトが書いてあるので、参考にすると良いでしょう。BoundingBoxは正規化した最小座標と最大座標であること、ファイル名が含まれないと他のtfrecord読み込みツールでエラーが出る可能性があることだけ注意していただければと思います。ファイル名なしでobject detection apiが使えるかは不明。試していません。
+
+TFRecordを生成するスクリプトを作った場合は、[tfrecord-viewer](https://github.com/sulc/tfrecord-viewer)で中身を確認したりできます。
+
+FrozenGraphの生成スクリプトは次の通りです。あとは、[からあげさんの記事通り](https://qiita.com/karaage0703/items/76ef6b774e3cd69028bb)でできます。
+
+```bash
+INPUT_TYPE=image_tensor
+PIPELINE_CONFIG_PATH=object_detection_tools/config/ssd_inception_v2_coco.config
+TRAINED_CKPT_PREFIX=~/Downloads/saved_model_01-20200701T084638Z-001/saved_model_01/model.ckpt-10000
+EXPORT_DIR=exported_graphs
+python object_detection/export_inference_graph.py \
+    --input_type=${INPUT_TYPE} \
+    --pipeline_config_path=${PIPELINE_CONFIG_PATH} \
+    --trained_checkpoint_prefix=${TRAINED_CKPT_PREFIX} \
+    --output_directory=${EXPORT_DIR}
+
+```
 
 #### Frustum Pointnetの学習
 [公開されているコード](https://github.com/charlesq34/frustum-pointnets)を拡張していく、姿勢が位置自由度なので、3自由度の推定を出来るように変更する。
