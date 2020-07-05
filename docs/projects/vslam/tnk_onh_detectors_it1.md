@@ -1,4 +1,20 @@
-# Mediapipeで物体Aが物体Bの内部にどの程度入っているか計算する(1st iteration)
+# 1st iteration: tnkとonhの物体検出(2D)モデルを学習
+## 1st iterationでの実装物
+スクリプトは下記リポジトリにまとまっている。
+
+* scripts/annotate_3d_bounding_box.py --map-dir-path ~~~
+* scripts/create_frustum_dataset.py --datset-dir ~~~
+* 小さいデータセットで学習した2d object detectionモデル
+
+![](onaho_detection.png)
+
+## ユースケース
+* 物体A(tnk)が物体B(onh)の内部にどの程度入っているか計算する
+
+## リスク
+* カメラ入力から検出まで20msくらいに抑えたいが可能か？
+* 不可能だった場合に、サンプルアプリにてどの程度の違和感を感じるか？
+
 ## 開発方針
 内部に入っているかの計算をする場合、
 画像空間上でアルゴリズムを組んでいくことも出来るし、
@@ -23,11 +39,6 @@ bounding boxを採用します。(内部に入れる方はキーポイントの�
 あとはBounding Boxとキーポイントの交差の長さによって、
 あるものを判定したい。
 
-## 1st iterationでの実装物
-* scripts/annotate_3d_bounding_box.py --map-dir-path ~~~
-* scripts/create_frustum_dataset.py --datset-dir ~~~
-* 小さいデータセットで学習したモデル
-
 ## 教師データを収集
 3D Bounding Boxの学習データを効率よく集める方法として、
 [mediapipeで使われている方法](https://ai.googleblog.com/2020/03/real-time-3d-object-detection-on-mobile.html)が良さそうです。
@@ -44,7 +55,7 @@ bounding boxを採用します。(内部に入れる方はキーポイントの�
 センサのモデルに合った点群モデル生成も必要です。
 
 ### AR合成データの作成(WIP)
-
+ARライブラリが使えて、デプス取れる機器がなかったため、諦めました。
 
 ### SLAM地図に対するアノテーション
 SLAMを使って地図を作り、その地図に対してBounding Boxをアノテーションする。
@@ -67,9 +78,17 @@ SLAMを使って地図を作り、その地図に対してBounding Boxをアノ�
 パラメータ調整が大変と書かれているので多少不安ではありますが、Cartographerが最も良い地図がえられそうです。IMUを使っていて、Graph Based SLAMは全体最適を書けるフェーズがあるからです。
 次点がrtabmapです。
 
-### (Kinect or realsense) & Cartographer on ROS
+cartographerは
+
+* ROS2対応が安定していなさそう
+* ROS１でPython3使うとトラブル増えそう。
+
+ということで、一旦諦めました。
+
+### (Kinect or realsense) & Cartographer on ROS（諦めた）
 #### ROSインストール(WIP)
-ROS2はよ普及して！！！（他力本願）
+ROS2への対応を待ちたい。
+もしくは余裕があったら、contribute。
 
 (ROSはpython3のサポートはないようで、[python3を使うとると気をつけないといけない点やトラブルが多そう](https://qiita.com/tnjz3/items/4d64fc2d3な6b75e604ab1)なので、利便性をROS導入の工数が上回りそうなので導入は見合わせました。)
 
@@ -92,6 +111,22 @@ Python3はイレギュラーなようなので、ROSは利用しないことに�
 #### CartographerをROSなしで利用(WIP)
 
 ### RtabmapとOpen3Dでアノテーション
+#### セットアップ
+```bash
+cmake .. -DWITH_REALSENSE2=ON -DWITH_K4A=ON
+sudo checkinstall --pkgname=rtabmap --pkgversion="$(date +%Y%m%d%H%M)-git" --default
+```
+
+#### 設定
+設定を変更する必要したら、
+設定したFPS分の画像データが取れるようになる。
+
+* PCに合わせてフレームレートとバッファ上限設定
+* Closure Loopが見つかった場合にグラフのノードを消す処理をオフに
+* あとはrawデータを保持する設定をオン
+* マップ更新の条件を角度は0.1rad, 位置は0.000にする
+
+#### 地図の出力
 [C++で書かれているアノテーションツール](https://github.com/yzrobot/cloud_annotation_tool)はある。ただ、GPLであるため、もう少しゆるいライセンスのものが良い。
 rtabmapで地図生成して、カメラ位置、RGB画像、デプス画像、完成物の地図を生成できる。
 フォーマットは、
@@ -103,10 +138,6 @@ rtabmapで地図生成して、カメラ位置、RGB画像、デプス画像、�
 * RGBD：RGB画像とデプス、フレームレートは端末位置のフレームレートと同じだった。
   * calibration.yamlに含まれているカメラ行列は？
   * これの説明がどこにもなくて不明。
-
-Open3Dには点群を選択するVisualizerWithEditingクラスがあるので、
-これで点群を選択して、その点群を囲むBoundingBoxを自動生成して、それを使うことにする。
-また、VisualizerWithKeycallbackを使えば、BoundingBoxの自動調整はできそうです。
 
 #### rtabmapが出力するcalibration.yamlについて
 このcalibration.yamlにはいっているcamera_matrixが、
@@ -123,9 +154,14 @@ realsenseの座標系は[realsenseのgithub wiki](https://github.com/IntelRealSe
     * Open3DのOrientedBoundingBoxのrotateメソッドが何かおかしい件の調査
 
 
-#### Open3DのVisualizerの拡張性
+#### Open3DのVisualizerの拡張性：アノテーション利用
 Open3Dは出来る限り拡張せずに使えるVisualizerを提供することを目指している？
 現時点では、あまり拡張性の幅が広くなく、キーイベントは追加できるがマウスイベントは追加できない。
+
+アノテーションは基本機能のみでできそうです。
+Open3Dには点群を選択するVisualizerWithEditingクラスがあり、
+このVisualizerには点群をCropする機能があるので、それで、点群をCrop。
+その点群を囲むBoundingBoxをOpen3dのBoundingBox検知アルゴリズムで自動生成して、それを使うことにする。また、VisualizerWithKeycallbackを使えば、BoundingBoxの自動調整はできそうです。
 
 * サンプル
   * http://www.open3d.org/docs/release/tutorial/Advanced/interactive_visualization.html
@@ -205,7 +241,7 @@ Object Detection APIを使うメリットですが、
 Tensorflowの知識がある人にとっての使いやすさなどが上げられます。
 
 
-##### データセットを作成
+##### 自分のデータセットで学習
 Object Detection APIを使った学習フローは次の通りです。
 
 1. 学習データをtf-record形式で、ラベルIDの対応付データをproto形式で出力する。
@@ -234,38 +270,6 @@ python object_detection/export_inference_graph.py \
     --pipeline_config_path=${PIPELINE_CONFIG_PATH} \
     --trained_checkpoint_prefix=${TRAINED_CKPT_PREFIX} \
     --output_directory=${EXPORT_DIR}
-
 ```
-
-#### Frustum Pointnetの学習
-[公開されているコード](https://github.com/charlesq34/frustum-pointnets)を拡張していく、姿勢が位置自由度なので、3自由度の推定を出来るように変更する。
-このリポジトリには2D検出部分は含まれていないため、自前で学習する必要がある。
-
-まずは動作確認。必要なモジュールをインストールする。Kittiデータセットを、このリポジトリで使える形式に変換したものが、pickle形式で公開されているが、これはpython2でpickleされたものでpython3で読み込む場合、[エンコードを指定したりしないといけない。](https://qiita.com/Kodaira_/items/91207a7e092f491fca43)これに注意してソースコードを変更してあとは実行するのみ。
-
-まず、学習データセットの形式を確認する。この形式に合ったpickleファイルを保存することで、
-自前データセットの学習機能を実現する。
-
-* id_list: トラック(１インスタンスのIDリスト)
-* box2d_list: 2d bounding box(各要素はshape1,4のnd.array)
-  * 使われてない。関係なさそう。
-* box3d_list: 3d bounding box(各要素はshape(3,8)のnd.array)
-  * 順：
-* input_list: 入力値。shape(n,4)のnd.array
-* label_list: ？？セマンティックセグメンテションの？値？点群と同じshape
-* type_list: 文字列。クラス名
-* heading_list: yaw
-* size_list: bounding boxのサイズ？
-* frustum_angle_list: frustumの情報。座標変換のみにしか使われてなさそう。
-
-やるべきことは２つで自前データの加工とモデルの拡張。
-1000フレーム２クラスのデータを用意して、2D detectionとPointnetの学習をする。
-prepare_dataでtrain,evalはground truth2Dを使って、
-frustum内部の点群を抽出している。この処理を真似れば、自前データの処理ができる。
-modelsのangleとdatasetクラスを変更すれば角度は増やせるはずです。
-
-!!! todo
-    * prepare_data.pyを参考に3D bounding boxデータを元にPointnet学習データを実装する
-    * 2D bounding boxを学習する。
 
 [^1]: aaaaa

@@ -2,6 +2,8 @@
 嫁AI開発者＆Researcher募集！
 [Twitter](https://twitter.com/_xiongjie_)からDMください。
 
+AI嫁開発をしている人の情報交換用の[Discordチャンネル](https://discord.gg/KtPxEqX)も作りましたのでご自由にご参加ください。
+
 ## Xiong Jie
 ### Social Media
 * [Twitter](https://twitter.com/_xiongjie_)

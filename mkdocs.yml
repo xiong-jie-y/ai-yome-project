@@ -20,7 +20,8 @@ nav:
       - projects/vslam/roadmap.md
       - projects/vslam/3d_model_and_animation.md
       - projects/vslam/waist_motion_detection.md
-      - projects/vslam/tnk_onh_detectors_it1.md
+      - onhとtnkを認識するライブラリ検討:
+        - projects/vslam/tnk_onh_detectors_it1.md
     - Interactive Character:
       - projects/interactive_character/fuwamiku.md
       - projects/interactive_character/sense_map.md
