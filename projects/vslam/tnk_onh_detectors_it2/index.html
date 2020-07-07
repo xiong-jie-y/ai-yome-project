@@ -857,10 +857,51 @@
     オクルージョンの対応
   </a>
   
+    <nav class="md-nav" aria-label="オクルージョンの対応">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boundingbox_1" class="md-nav__link">
+    隠れていない場所だけ囲うBoundingBoxを出す
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boundingbox_2" class="md-nav__link">
+    隠れている場所も含めたBoundingBoxを出す
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    アノテーションをどうするか
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2d-boundingbox" class="md-nav__link">
+    2D BoundingBoxのみを用いた上限運動の計算検討
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    トラッキングで改善
+  </a>
   
 </li>
       
@@ -873,14 +914,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     データセット作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     学習と学習結果
   </a>
   
@@ -1001,13 +1042,37 @@ soファイルの生成ができる。</p>
 </div>
 <h2 id="2d">2D検出の改善<a class="headerlink" href="#2d" title="Permanent link">&para;</a></h2>
 <h3 id="_6">学習データ生成の改善<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
-<p>cropした点群を使ってピクセルをProjectionして、
-それを囲むBoundingBoxを生成する方が小さいBoundingBoxを生成できるはずなので、
+<p>今回のユースケースでは、BoundingBoxのサイズは出来る限り小さいほうが良い。
+今回はBoundingBoxのサイズを出来る限り下げる。cropした点群を使ってピクセルをProjectionして、それを囲むBoundingBoxを生成する方が小さいBoundingBoxを生成できるはずなので、
 そのアルゴリズムを検討する。</p>
-<p>次に、オクルージョンがあっても、写っていない部分を含んだBoundingBoxを生成出来るようにモデルを変更する。</p>
+<p>このアルゴリズムは点ごとの処理になるため、処理数は大幅に増加する。
+実装時は実行時間に注意しなければならない。
+Pythonで実行時間を下げるポイントとしては、</p>
+<p>次に、オクルージョンの対応を考える。</p>
 <h3 id="_7">オクルージョンの対応<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>一部だけを囲うBoundingBoxを出すようにはできるはず。</p>
+<h4 id="boundingbox_1">隠れていない場所だけ囲うBoundingBoxを出す<a class="headerlink" href="#boundingbox_1" title="Permanent link">&para;</a></h4>
+<h4 id="boundingbox_2">隠れている場所も含めたBoundingBoxを出す<a class="headerlink" href="#boundingbox_2" title="Permanent link">&para;</a></h4>
+<p>写っていない部分を含んだBoundingBoxを生成出来るようにモデルを変更する方法もある。</p>
+<h4 id="_8">アノテーションをどうするか<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<h2 id="2d-boundingbox">2D BoundingBoxのみを用いた上限運動の計算検討<a class="headerlink" href="#2d-boundingbox" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Z軸の補正<ul>
+<li>物体のサイズのPriorを使って、単位とZ軸の補正ができる？</li>
+<li>カメラから見た物体の姿勢が変更しない前提で位置がm単位で取れる</li>
+</ul>
+</li>
+<li>カメラ位置をどうするか<ul>
+<li>カメラに近すぎると物体がカメラの範囲から出る</li>
+<li>カメラから遠すぎると、位置予測精度が下がる？（実験する。)</li>
+<li>1ピクセル当たりの上下移動量が大きくなるのでBoundingBoxの検知誤差に厳しい。</li>
+<li>データセットが少ないので増やす。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_9">トラッキングで改善<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
 <h2 id="frustum-pointnet">Frustum Pointnetの学習<a class="headerlink" href="#frustum-pointnet" title="Permanent link">&para;</a></h2>
-<h3 id="_8">データセット作成<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<h3 id="_10">データセット作成<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <p><a href="https://github.com/charlesq34/frustum-pointnets">公開されているコード</a>を拡張していく、姿勢が位置自由度なので、3自由度の推定を出来るように変更する。
 このリポジトリには2D検出部分は含まれていないため、自前で学習する必要がある。</p>
 <p>まずは動作確認。必要なモジュールをインストールする。Kittiデータセットを、このリポジトリで使える形式に変換したものが、pickle形式で公開されているが、これはpython2でpickleされたものでpython3で読み込む場合、<a href="https://qiita.com/Kodaira_/items/91207a7e092f491fca43">エンコードを指定したりしないといけない。</a>これに注意してソースコードを変更してあとは実行するのみ。</p>
@@ -1042,7 +1107,7 @@ modelsのangleとdatasetクラスを変更すれば角度は増やせるはず�
 <li>2D bounding boxを学習する。</li>
 </ul>
 </div>
-<h3 id="_9">学習と学習結果<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<h3 id="_11">学習と学習結果<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
                 
               
               
