@@ -1,10 +1,20 @@
 # 開発者プロフィール
 嫁AI開発者＆Researcher募集！
 [Twitter](https://twitter.com/_xiongjie_)からDMください。
+また、ご支援いただける方、何かを共同開発したい方もTwitterからDMください。
+
+現在はAI嫁のスキンシップ機能に力を入れています。例えば、次のようなプロジェクトに取り組んでいます。
+
+* [tnkとonhの物体検出によるアプリ拡張](https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/tnk_onh_detectors_it1/)
+* [ジャイロセンサを使った腰の動きに連動するアプリの実装](https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/waist_motion_detection/)
 
 AI嫁開発をしている人の情報交換用の[Discordチャンネル](https://discord.gg/KtPxEqX)も作りましたのでご自由にご参加ください。
 
 ## Xiong Jie
+### Projects
+* [tnkとonhの物体検出によるアプリ拡張](https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/tnk_onh_detectors_it1/)
+* [ジャイロセンサを使った腰の動きに連動するアプリの実装](https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/waist_motion_detection/)
+
 ### Social Media
 * [Twitter](https://twitter.com/_xiongjie_)
 * [マシュマロ[質問箱]](https://marshmallow-qa.com/_xiongjie_?utm_medium=url_text&utm_source=promotion)
