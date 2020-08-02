@@ -78,4 +78,3 @@ TensorRTで最適化してONNXにして、ONNX Runtimeで動かすこともで�
 ## Application Example
 TensorflowモデルをTensorRTで最適化したのちに、ONNX modelに変換して、
 ONNX Runtimeでmediapipe上で実行します。
-
