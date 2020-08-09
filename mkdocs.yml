@@ -15,15 +15,16 @@ nav:
         - knowledges/dev_envs/streamlit_for_development.md
   - OSSで作るリアルタイム認識:
       - 機械学習モデルの軽量化:
-        - knowledges/lightweight_ml/lighten_model.md
-        - knowledges/lightweight_ml/tensorrt.md
-        - knowledges/lightweight_ml/tflite.md
+        - oss_perception/lightweight_ml/lighten_model.md
+        - oss_perception/lightweight_ml/tensorrt.md
+        - oss_perception/lightweight_ml/tflite.md
       - Mediapipe:
-        - knowledges/dev_envs/mediapipe/framework_characteristics.md
-        - knowledges/dev_envs/mediapipe/2d_detection.md
-        - knowledges/dev_envs/mediapipe/3d_detection.md
-        - knowledges/dev_envs/mediapipe/keypoint_detection.md
-        - knowledges/dev_envs/construct_new_pipeline.md
+        - oss_perception/mediapipe/framework_characteristics.md
+        - oss_perception/mediapipe/framework_basics_for_impl.md
+        - oss_perception/mediapipe/2d_detection.md
+        - oss_perception/mediapipe/3d_detection.md
+        - oss_perception/mediapipe/keypoint_detection.md
+        - oss_perception/construct_new_pipeline.md
   - プロジェクト:
     - VSLAM (Virtual Sex Life Augmenting Mechanism):
       - projects/vslam/roadmap.md
