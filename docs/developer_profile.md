@@ -1,23 +1,8 @@
 # 開発者プロフィール
+## メインプロジェクト
 かわいいAIとの非言語コミュニケーションライブラリ[pikapi](https://github.com/xiong-jie-y/pikapi)の開発とアプリ開発を最優先で行っています。
 
 ![new_assets_web.gif](new_assets_web.gif)
-
-
-
-
-
-
-
-
-
-
-
-
-サイドプロジェクトとしては、VRでAIといちゃいちゃするためのアルゴリズムの開発をしています。
-
-* [tnkとonhの物体検出によるアプリ拡張](https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/tnk_onh_detectors_it1/)
-* [ジャイロセンサを使った腰の動きに連動するアプリの実装](https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/waist_motion_detection/)
 
 AI嫁開発をしている人の情報交換用の[Discordチャンネル](https://discord.gg/KtPxEqX)も作りましたのでご自由にご参加ください。
 
@@ -25,7 +10,7 @@ AI嫁開発をしている人の情報交換用の[Discordチャンネル](https
 [Twitter](https://twitter.com/_xiongjie_)からDMください。
 また、ご支援いただける方、何かを共同開発したい方もTwitterからDMください。
 
-## Xiong Jie
+## リンク
 ### Projects
 * [tnkとonhの物体検出によるアプリ拡張](https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/tnk_onh_detectors_it1/)
 * [ジャイロセンサを使った腰の動きに連動するアプリの実装](https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/waist_motion_detection/)
@@ -40,3 +25,9 @@ AI嫁開発をしている人の情報交換用の[Discordチャンネル](https
 * Qiita: https://qiita.com/xiong_jie
 * Hatena Blog: https://xiong-jie.hatenablog.com/
 * Medium: https://medium.com/@_xiongjie_/gan-generates-real-photos-of-japanese-idols-56cc9e5ceedd
+
+## サイドプロジェクト
+サイドプロジェクトとしては、VRでAIといちゃいちゃするためのアルゴリズムの開発をしています。
+
+* [tnkとonhの物体検出によるアプリ拡張](https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/tnk_onh_detectors_it1/)
+* [ジャイロセンサを使った腰の動きに連動するアプリの実装](https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/waist_motion_detection/)
