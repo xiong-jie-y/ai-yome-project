@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://xiong-jie-y.github.io/ai-yome-project/oss_perception/math/rotation/">
+        <link rel="canonical" href="https://xiong-jie-y.github.io/ai-yome-project/projects/doll_stimulation/doll_search/">
       
       
       <link rel="shortcut icon" href="../../../assets/images/favicon.png">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Rotation - AI Yome Project</title>
+        <title>等身大ドールを顔写真で検索する機能の開発 - AI Yome Project</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -89,7 +94,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Rotation
+              等身大ドールを顔写真で検索する機能の開発
             
           </span>
         </div>
@@ -138,14 +143,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../../.." class="md-tabs__link">
         Home
       </a>
     
@@ -199,7 +206,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../lightweight_ml/lighten_model/" class="md-tabs__link">
+        <a href="../../../oss_perception/lightweight_ml/lighten_model/" class="md-tabs__link">
           OSSで作るリアルタイム認識
         </a>
       
@@ -218,7 +225,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../../projects/vslam/roadmap/" class="md-tabs__link">
+        <a href="../../vslam/roadmap/" class="md-tabs__link">
           プロジェクト
         </a>
       
@@ -538,7 +545,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../lightweight_ml/lighten_model/" title="機械学習モデルの最適化" class="md-nav__link">
+    <a href="../../../oss_perception/lightweight_ml/lighten_model/" title="機械学習モデルの最適化" class="md-nav__link">
       機械学習モデルの最適化
     </a>
   </li>
@@ -550,7 +557,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../lightweight_ml/tensorrt/" title="TensorRTを使った最適化" class="md-nav__link">
+    <a href="../../../oss_perception/lightweight_ml/tensorrt/" title="TensorRTを使った最適化" class="md-nav__link">
       TensorRTを使った最適化
     </a>
   </li>
@@ -562,7 +569,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../lightweight_ml/tflite/" title="TFLiteにコンバート" class="md-nav__link">
+    <a href="../../../oss_perception/lightweight_ml/tflite/" title="TFLiteにコンバート" class="md-nav__link">
       TFLiteにコンバート
     </a>
   </li>
@@ -604,7 +611,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../mediapipe/framework_characteristics/" title="mediapipeフレームワークの特徴" class="md-nav__link">
+    <a href="../../../oss_perception/mediapipe/framework_characteristics/" title="mediapipeフレームワークの特徴" class="md-nav__link">
       mediapipeフレームワークの特徴
     </a>
   </li>
@@ -616,7 +623,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../mediapipe/framework_basics_for_impl/" title="Framework basics for impl" class="md-nav__link">
+    <a href="../../../oss_perception/mediapipe/framework_basics_for_impl/" title="Framework basics for impl" class="md-nav__link">
       Framework basics for impl
     </a>
   </li>
@@ -628,7 +635,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../mediapipe/2d_detection/" title="2Dオブジェクト検出" class="md-nav__link">
+    <a href="../../../oss_perception/mediapipe/2d_detection/" title="2Dオブジェクト検出" class="md-nav__link">
       2Dオブジェクト検出
     </a>
   </li>
@@ -640,7 +647,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../mediapipe/3d_detection/" title="3Dオブジェクト検出" class="md-nav__link">
+    <a href="../../../oss_perception/mediapipe/3d_detection/" title="3Dオブジェクト検出" class="md-nav__link">
       3Dオブジェクト検出
     </a>
   </li>
@@ -652,7 +659,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../mediapipe/keypoint_detection/" title="キーポイント検出" class="md-nav__link">
+    <a href="../../../oss_perception/mediapipe/keypoint_detection/" title="キーポイント検出" class="md-nav__link">
       キーポイント検出
     </a>
   </li>
@@ -664,7 +671,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../construct_new_pipeline.md" title="None" class="md-nav__link">
+    <a href="../../../oss_perception/construct_new_pipeline.md" title="None" class="md-nav__link">
       None
     </a>
   </li>
@@ -684,10 +691,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       プロジェクト
@@ -736,7 +745,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projects/vslam/roadmap/" title="ロードマップ" class="md-nav__link">
+    <a href="../../vslam/roadmap/" title="ロードマップ" class="md-nav__link">
       ロードマップ
     </a>
   </li>
@@ -748,7 +757,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projects/vslam/3d_model_and_animation/" title="3Dモデルとアニメーションのファイルフォーマット検討(WIP)" class="md-nav__link">
+    <a href="../../vslam/3d_model_and_animation/" title="3Dモデルとアニメーションのファイルフォーマット検討(WIP)" class="md-nav__link">
       3Dモデルとアニメーションのファイルフォーマット検討(WIP)
     </a>
   </li>
@@ -760,7 +769,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projects/vslam/waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-nav__link">
+    <a href="../../vslam/waist_motion_detection/" title="IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装" class="md-nav__link">
       IMUとSLAMを使った腰の動きの解析と腰の動きに合わせた音声再生アプリの実装
     </a>
   </li>
@@ -797,7 +806,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projects/vslam/tnk_onh_detectors_it1/" title="1st iteration: tnkとonhの物体検出(2D)モデルを学習" class="md-nav__link">
+    <a href="../../vslam/tnk_onh_detectors_it1/" title="1st iteration: tnkとonhの物体検出(2D)モデルを学習" class="md-nav__link">
       1st iteration: tnkとonhの物体検出(2D)モデルを学習
     </a>
   </li>
@@ -809,7 +818,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projects/vslam/tnk_onh_detectors_it2/" title="2st iteration: 主にPoCアプリの検討" class="md-nav__link">
+    <a href="../../vslam/tnk_onh_detectors_it2/" title="2st iteration: 主にPoCアプリの検討" class="md-nav__link">
       2st iteration: 主にPoCアプリの検討
     </a>
   </li>
@@ -856,7 +865,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projects/interactive_character/fuwamiku/" title="インタラクティブなふわみくアプリの実装(3D on screen)" class="md-nav__link">
+    <a href="../../interactive_character/fuwamiku/" title="インタラクティブなふわみくアプリの実装(3D on screen)" class="md-nav__link">
       インタラクティブなふわみくアプリの実装(3D on screen)
     </a>
   </li>
@@ -868,9 +877,144 @@
 
 
   <li class="md-nav__item">
-    <a href="../../../projects/interactive_character/sense_map/" title="感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装" class="md-nav__link">
+    <a href="../../interactive_character/sense_map/" title="感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装" class="md-nav__link">
       感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3" checked>
+    
+    <label class="md-nav__link" for="nav-5-3">
+      DollStimulation
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="DollStimulation" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        DollStimulation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        等身大ドールを顔写真で検索する機能の開発
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="等身大ドールを顔写真で検索する機能の開発" class="md-nav__link md-nav__link--active">
+      等身大ドールを顔写真で検索する機能の開発
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    モチベーション
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    アプリのゴールと指標
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    指標達成へのアプローチ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    比較手法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    システム構成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-decisions" class="md-nav__link">
+    Key Decisions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    機能の利用状況と結果
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    結論
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -945,6 +1089,87 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    モチベーション
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    アプリのゴールと指標
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    指標達成へのアプローチ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    比較手法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    システム構成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-decisions" class="md-nav__link">
+    Key Decisions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    機能の利用状況と結果
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    結論
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -954,9 +1179,117 @@
                   
                 
                 
-                  <h1>Rotation</h1>
-                
-                
+                <h1 id="_1">等身大ドールを顔写真で検索する機能の開発<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">モチベーション<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>等身大ドールの商品数が増えている。現在、約1000で100/年くらいのペースで増えている。</li>
+<li>1000のドールから最も好みの顔、体型を選ぶのは大変。</li>
+<li>顔写真をクエリとして、類似した顔のドールを検索できると、好みのドールを探しやすいのでは？</li>
+</ul>
+<h2 id="_3">アプリのゴールと指標<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>購入の調査にかける時間を減らす<ul>
+<li>測定方法不明。アンケート？</li>
+</ul>
+</li>
+<li>購入後の満足度を高める<ul>
+<li>アンケート？測定方法不明</li>
+</ul>
+</li>
+</ul>
+<h2 id="_4">指標達成へのアプローチ<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>検索を改善する<ul>
+<li>手動 or 自動でデータベース整備<ul>
+<li>手動でも１０００の顔や体型を分類するくらいなら、1、２人日くらいで終わりそう。</li>
+</ul>
+</li>
+<li>カテゴリによる検索<ul>
+<li>体型による検索方法を提供(寸胴、胴長、脚長、ぽっちゃり)</li>
+<li>顔の傾向による検索方法を提供（ハーフ顔、ロリ顔、など）</li>
+</ul>
+</li>
+<li>数値範囲による検索<ul>
+<li>ボディの数値による検索</li>
+</ul>
+</li>
+<li><strong>顔写真による検索（今回実装）</strong></li>
+<li>複数の項目による検索</li>
+</ul>
+</li>
+<li>情報の質や量を高める<ul>
+<li>ユーザ投稿<ul>
+<li>たどり着いても写真だと伝わらない情報がある。（写真マジック）</li>
+<li>全ての情報が存在するわけではない。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>比較しやすくする<ul>
+<li>属性を比較する機能</li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">比較手法<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://edolls.net/">edolls</a><ul>
+<li>カテゴリ検索(or自動ラベリング)、顔写真検索と、比較機能以外は揃っている。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">システム構成<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li>検索フロントエンド, 顔特徴量: App Engine Flexible Runtime</li>
+<li>画像の一時保存先: Cloud Storage</li>
+<li>画像を使ったリクエストの保存: Cloud SQL</li>
+</ul>
+<h2 id="key-decisions">Key Decisions<a class="headerlink" href="#key-decisions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>IaaS or PaaS<ul>
+<li>PaaSで実装。こちらのほうが不要な設定なしで、早くできそうという考え。</li>
+<li>この考えは当たり、詳細なカスタマイズも、用意されたコンテナを拡張子ながらできるので、便利。</li>
+</ul>
+</li>
+<li>App Engine<ul>
+<li>CloudRunは汎用的すぎる。CluudFunctionはIndexのプリロードが厳しそう。（方法あれば採用はあり）、Cloud Functionはおそらく、マイクロサービス化やりやすいので、次回のプロトタイプでの採用 -&gt; App Engineへの移行はあり。App EngineのBasic Runtime使えるならデプロイ早いので、AppEngineでもいいかも。</li>
+</ul>
+</li>
+<li>Cloud SQL<ul>
+<li>お試しだったのでこれ。他の形式もありかも</li>
+</ul>
+</li>
+<li>Cloud Storage<ul>
+<li>地理的レプリケーション不要なので、安いやつを普通に使った。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_7">機能の利用状況と結果<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li>利用者数ゼロ<ul>
+<li>調査時間。減るか減らないか不明</li>
+<li>全て見て、自分に最適なものを探したい人には</li>
+<li>700くらいなら全部見る場合の精度が圧倒的？な感じがする。少なくとも人気上位を確認すればいい。</li>
+</ul>
+</li>
+<li>検索の質はいまいち<ul>
+<li>人っぽくないドールは検索しにくい。</li>
+<li>アニメ系、エルフとかは顔写真で検索しにくい</li>
+<li>人らしいドールは少ないので、検索が偏っている感がある。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_8">結論<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Discontinue &amp; Close<ul>
+<li>なぜ失敗したか？</li>
+<li>そもそもが実験的な機能なので、失敗する可能性はあった。</li>
+<li>実験的な機能で成功を期待してやったのが間違いだったので、失敗の原因というより、成功を期待するという態度に間違いがあった。</li>
+<li>あと、特徴量空間の探索はもっと必要だった。（そうすれば早い段階で失敗に気づけた）なので、失敗する前提で、小さな実験を組むのがやるべきことだった。</li>
+</ul>
+</li>
+<li>Webサービス開発をする上での技術選択は良かった。</li>
+<li>検索や認識アルゴリズムの改良はやっていってもいいかも。でも、手動に勝てないしなぁー。 </li>
+</ul>
                 
               
               
@@ -965,7 +1298,7 @@
 
   <h2 id="__comments">Comments</h2>
   <div id="disqus_thread"></div>
-  <script>var disqus_config=function(){this.page.url="https://xiong-jie-y.github.io/ai-yome-project/oss_perception/math/rotation/",this.page.identifier="oss_perception/math/rotation/"};!function(){var e=document,i=e.createElement("script");i.src="//ai-yome-project.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
+  <script>var disqus_config=function(){this.page.url="https://xiong-jie-y.github.io/ai-yome-project/projects/doll_stimulation/doll_search/",this.page.identifier="projects/doll_stimulation/doll_search/"};!function(){var e=document,i=e.createElement("script");i.src="//ai-yome-project.disqus.com/embed.js",i.setAttribute("data-timestamp",+new Date),(e.head||e.body).appendChild(i)}()</script>
 
               
             </article>
@@ -975,6 +1308,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../interactive_character/sense_map/" title="感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                感覚マップと物理エンジンを使ったAIエージェントへの皮膚感覚の実装
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../../developer_profile/" title="開発者プロフィール" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                開発者プロフィール
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
