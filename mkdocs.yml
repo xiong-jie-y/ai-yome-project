@@ -36,6 +36,8 @@ nav:
     - Interactive Character:
       - projects/interactive_character/fuwamiku.md
       - projects/interactive_character/sense_map.md
+    - DollStimulation:
+      - projects/doll_stimulation/doll_search.md
   - 開発者プロフィール: 
     - developer_profile.md
     - consultation.md
