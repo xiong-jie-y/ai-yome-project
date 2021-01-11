@@ -35,10 +35,13 @@ nav:
         - projects/vslam/tnk_onh_detectors_it2.md
     - Interactive Character:
       - projects/interactive_character/fuwamiku.md
+      - projects/interactive_character/praising_agent.md
       - projects/interactive_character/sense_map.md
-    - DollStimulation:
-      - projects/doll_stimulation/yome_search.md
+    - (Pending)等身大ドール分野のサービス検討:
       - projects/doll_stimulation/doll_search.md
+      - projects/doll_stimulation/yome_search.md
+      - projects/doll_stimulation/cloud_research.md
+      - projects/doll_stimulation/reuse_face_index.md
   - 開発者プロフィール: 
     - developer_profile.md
     - consultation.md
