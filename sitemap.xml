@@ -1,107 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/surveys/language_understanding/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/surveys/motion_generation/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/surveys/spatial_perception/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/surveys/3d_engine/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/surveys/development_env/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/surveys/physics/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/knowledges/dev_envs/streamlit_for_development/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/oss_perception/lightweight_ml/lighten_model/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/oss_perception/lightweight_ml/tensorrt/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/oss_perception/lightweight_ml/tflite/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/oss_perception/mediapipe/framework_characteristics/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/oss_perception/mediapipe/framework_basics_for_impl/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/oss_perception/mediapipe/2d_detection/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/oss_perception/mediapipe/3d_detection/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/oss_perception/mediapipe/keypoint_detection/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/roadmap/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/3d_model_and_animation/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/waist_motion_detection/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/tnk_onh_detectors_it1/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/projects/vslam/tnk_onh_detectors_it2/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/projects/interactive_character/fuwamiku/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://xiong-jie-y.github.io/ai-yome-project/projects/interactive_character/praising_agent/</loc>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/projects/interactive_character/sense_map/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/projects/doll_stimulation/doll_search/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://xiong-jie-y.github.io/ai-yome-project/projects/doll_stimulation/yome_search/</loc>
+     <lastmod>2021-01-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://xiong-jie-y.github.io/ai-yome-project/projects/doll_stimulation/cloud_research/</loc>
+     <lastmod>2021-01-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://xiong-jie-y.github.io/ai-yome-project/projects/doll_stimulation/reuse_face_index/</loc>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/developer_profile/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://xiong-jie-y.github.io/ai-yome-project/consultation/</loc>
-     <lastmod>2020-12-12</lastmod>
+     <lastmod>2021-01-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
